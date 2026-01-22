@@ -1,10 +1,10 @@
-// @ts-nocheck
+// @ts-expect-error - Deno remote import
 // This is a Deno Edge Function for Supabase
 // Type checking for remote Deno imports is handled by the Deno runtime
 
 // @deno-types="https://deno.land/std@0.168.0/http/server.ts"
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-// @ts-ignore - Deno remote import
+// @ts-expect-error - Deno remote import
 import { Resend } from "https://cdn.jsdelivr.net/npm/resend@0.11.0/dist/index.ts";
 
 // deno-lint-ignore no-explicit-any

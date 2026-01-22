@@ -11,7 +11,7 @@ import {
 describe("Constants", () => {
   describe("ORGANIZATION", () => {
     it("has required properties", () => {
-      expect(ORGANIZATION.name).toBe("kaira Oasis care");
+      expect(ORGANIZATION.name).toBe("Kaira Oasis Care LLC");
       expect(ORGANIZATION.tagline).toBe("Nature's Embrace");
       expect(ORGANIZATION.founded).toBe(1995);
       expect(ORGANIZATION.logo.initials).toBe("KO");
@@ -25,7 +25,7 @@ describe("Constants", () => {
 
   describe("CONTACT", () => {
     it("has valid phone number", () => {
-      expect(CONTACT.phone).toMatch(/^\d{1}-\d{3}-\d{3}-\d{4}$/);
+      expect(CONTACT.phone).toMatch(/^\+\d{1}\.\d{3}\.\d{3}\.\d{4}$/);
     });
 
     it("has valid email format", () => {
