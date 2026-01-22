@@ -13,6 +13,7 @@ export const ORGANIZATION = {
     "To provide comfort, dignity, and support for patients and families during their journey.",
   logo: {
     initials: "KO",
+    image: "/logo.png",
   },
 };
 

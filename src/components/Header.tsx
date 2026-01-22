@@ -40,9 +40,17 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display text-lg font-bold">{ORGANIZATION.logo.initials}</span>
-            </div>
+            {ORGANIZATION.logo.image ? (
+              <img 
+                src={ORGANIZATION.logo.image} 
+                alt={ORGANIZATION.name}
+                className="h-12 w-auto object-contain"
+              />
+            ) : (
+              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-display text-lg font-bold">{ORGANIZATION.logo.initials}</span>
+              </div>
+            )}
             <div className="flex flex-col">
               <span className="font-display text-xl font-semibold text-foreground">{ORGANIZATION.name}</span>
               <span className="text-xs text-muted-foreground font-body">{ORGANIZATION.tagline}</span>
