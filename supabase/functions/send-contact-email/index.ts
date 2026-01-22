@@ -1,5 +1,14 @@
+// @ts-nocheck
+// This is a Deno Edge Function for Supabase
+// Type checking for remote Deno imports is handled by the Deno runtime
+
+// @deno-types="https://deno.land/std@0.168.0/http/server.ts"
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+// @ts-ignore - Deno remote import
 import { Resend } from "https://cdn.jsdelivr.net/npm/resend@0.11.0/dist/index.ts";
+
+// deno-lint-ignore no-explicit-any
+declare const Deno: any;
 
 interface ContactRequest {
   firstName: string;
@@ -17,7 +26,8 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-serve(async (req) => {
+// deno-lint-ignore no-explicit-any
+serve(async (req: any) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });

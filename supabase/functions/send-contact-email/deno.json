@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.168.0/",
+    "resend": "https://cdn.jsdelivr.net/npm/resend@0.11.0/dist/index.ts"
+  }
+}
