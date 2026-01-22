@@ -27,8 +27,31 @@ export const useContactForm = () => {
       // Validate data
       const validatedData = contactSchema.parse(data);
 
+      // Call Edge Function to send email
+      const { data: functionData, error: functionError } = await supabase.functions.invoke(
+        "send-contact-email",
+        {
+          body: {
+            firstName: validatedData.firstName,
+            lastName: validatedData.lastName,
+            email: validatedData.email,
+            phone: validatedData.phone || null,
+            message: validatedData.message,
+          },
+        }
+      );
+
+      if (functionError) {
+        // Retry logic for network/transient errors
+        if (attempt < MAX_RETRIES && functionError.message.includes("Network")) {
+          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+          return submitForm(data, attempt + 1);
+        }
+        throw functionError;
+      }
+
       // Submit to database
-      const { error } = await supabase.from("contact_submissions").insert({
+      const { error: dbError } = await supabase.from("contact_submissions").insert({
         first_name: validatedData.firstName,
         last_name: validatedData.lastName,
         email: validatedData.email,
@@ -36,13 +59,14 @@ export const useContactForm = () => {
         message: validatedData.message,
       });
 
-      if (error) {
+      if (dbError) {
         // Retry logic for network/transient errors
-        if (attempt < MAX_RETRIES && error.message.includes("Network")) {
+        if (attempt < MAX_RETRIES && dbError.message.includes("Network")) {
           await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
           return submitForm(data, attempt + 1);
         }
-        throw error;
+        // Log database error but don't fail since email was sent
+        console.error("Database error:", dbError);
       }
 
       toast({
