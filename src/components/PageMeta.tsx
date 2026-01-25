@@ -17,7 +17,7 @@ export const PageMeta = ({ page, title, description }: PageMetaProps) => {
       <title>{title || meta.title}</title>
       <meta name="description" content={description || meta.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta charset="utf-8" />
+      <meta charSet="utf-8" />
 
       {/* Open Graph Meta Tags (Social Media) */}
       <meta property="og:type" content={meta.type} />
