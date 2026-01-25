@@ -8,22 +8,53 @@ const contactSchema = z.object({
   lastName: z.string().trim().min(1, "Last name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
   phone: z.string().trim().max(20).optional(),
-  message: z.string().trim().min(1, "Message is required").max(2000),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000),
+  honeypot: z.string().max(0, "Invalid submission").optional(), // Spam prevention
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;
 
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 1000; // ms
+const RATE_LIMIT_WINDOW = 60000; // 1 minute
+const MAX_SUBMISSIONS_PER_WINDOW = 3;
+
+// In-memory rate limiting (resets on page reload)
+const submissionTimes: number[] = [];
 
 export const useContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  const checkRateLimit = (): boolean => {
+    const now = Date.now();
+    // Remove old submissions outside the window
+    while (submissionTimes.length > 0 && submissionTimes[0] < now - RATE_LIMIT_WINDOW) {
+      submissionTimes.shift();
+    }
+
+    if (submissionTimes.length >= MAX_SUBMISSIONS_PER_WINDOW) {
+      return false;
+    }
+
+    submissionTimes.push(now);
+    return true;
+  };
+
   const submitForm = async (data: ContactFormData, attempt = 1): Promise<{ success: boolean }> => {
     setIsSubmitting(true);
 
     try {
+      // Check rate limit
+      if (!checkRateLimit()) {
+        toast({
+          title: "Too Many Requests",
+          description: "Please wait a moment before submitting another request.",
+          variant: "destructive",
+        });
+        return { success: false };
+      }
+
       // Validate data
       const validatedData = contactSchema.parse(data);
 

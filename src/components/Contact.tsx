@@ -41,6 +41,7 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
+    honeypot: "", // Spam prevention field
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -53,6 +54,7 @@ const Contact = () => {
         email: "",
         phone: "",
         message: "",
+        honeypot: "",
       });
     }
   };
@@ -171,7 +173,27 @@ const Contact = () => {
                   required
                   className="bg-background border-border rounded-xl min-h-[120px] resize-none"
                 />
+                <div className="flex justify-between mt-1">
+                  <span className="text-xs text-muted-foreground">
+                    Minimum 10 characters required
+                  </span>
+                  <span className={`text-xs ${formData.message.length < 10 ? 'text-destructive' : 'text-green-600'}`}>
+                    {formData.message.length}/100
+                  </span>
+                </div>
               </div>
+
+              {/* Honeypot field - hidden from users */}
+              <input
+                type="text"
+                name="honeypot"
+                value={formData.honeypot}
+                onChange={handleChange}
+                style={{ display: 'none' }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
               <Button type="submit" className="btn-primary w-full" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>

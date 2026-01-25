@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageMeta from "@/components/PageMeta";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import blogComfort from "@/assets/blog-comfort.jpg";
@@ -373,6 +374,7 @@ const BlogPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta page="blog" />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

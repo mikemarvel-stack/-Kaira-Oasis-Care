@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageMeta from "@/components/PageMeta";
 import { Button } from "@/components/ui/button";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import blogComfort from "@/assets/blog-comfort.jpg";
@@ -374,6 +375,7 @@ const BlogDetailPage = () => {
   if (!post) {
     return (
       <div className="min-h-screen bg-background">
+        <PageMeta page="blog" />
         <Header />
         <main className="pt-20">
           <section className="section-padding">
@@ -393,6 +395,7 @@ const BlogDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta page="blog" />
       <Header />
       <main className="pt-20">
         {/* Article Header */}

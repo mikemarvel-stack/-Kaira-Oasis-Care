@@ -8,10 +8,12 @@ import FAQ from "@/components/FAQ";
 import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import PageMeta from "@/components/PageMeta";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta page="home" />
       <Header />
       <main>
         <Hero />

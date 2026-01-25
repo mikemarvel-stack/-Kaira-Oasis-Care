@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
+import PageMeta from "@/components/PageMeta";
 import { FileText, Download, ExternalLink, BookOpen, Heart, Users, ClipboardList, CheckSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -165,6 +166,7 @@ const ResourcesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta page="resources" />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

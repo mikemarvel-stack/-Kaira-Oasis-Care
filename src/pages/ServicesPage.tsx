@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageMeta from "@/components/PageMeta";
 import { Heart, Users, Home, Clock, Stethoscope, HandHeart, Shield, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -64,6 +65,7 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta page="services" />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

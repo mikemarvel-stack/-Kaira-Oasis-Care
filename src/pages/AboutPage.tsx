@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Team from "@/components/Team";
+import PageMeta from "@/components/PageMeta";
 import { Heart, Award, Users, Clock } from "lucide-react";
 import careComfortImage from "@/assets/care-comfort.jpg";
 import familySupportImage from "@/assets/family-support.jpg";
@@ -42,6 +43,7 @@ const values = [
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageMeta page="about" />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
