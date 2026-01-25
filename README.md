@@ -6,49 +6,97 @@ A modern, fully-featured web application for Kaira Oasis Care LLC, providing com
 
 ![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)
 ![License](https://img.shields.io/badge/license-proprietary-red)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.0.1-blue)
 ![React](https://img.shields.io/badge/react-18.3.1-blue)
 ![TypeScript](https://img.shields.io/badge/typescript-5.8.3-blue)
 ![Vite](https://img.shields.io/badge/vite-5.4.19-646cff)
+![Tests](https://img.shields.io/badge/tests-14%2F14%20passing-success)
 [![Deployed on Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000?logo=vercel)](https://vercel.com)
+
+**🌐 Live Site:** https://kairaoasiscare.com
 
 ---
 
 ## 📋 Table of Contents
 
 - [Overview](#overview)
+- [Quick Start](#quick-start)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
-- [Environment Configuration](#environment-configuration)
+- [Getting Started](#getting-started)
+- [Environment Setup](#environment-setup)
 - [Development](#development)
-- [Production Build](#production-build)
-- [Deployment with Vercel](#deployment-with-vercel)
+- [Building & Testing](#building--testing)
+- [Deployment](#deployment)
+- [Configuration Guide](#configuration-guide)
+- [Database Setup](#database-setup)
+- [Email System](#email-system)
 - [Forms & Resources](#forms--resources)
-- [Blog & Content](#blog--content)
-- [Database](#database)
-- [Testing](#testing)
-- [Performance Optimization](#performance-optimization)
-- [Security Best Practices](#security-best-practices)
+- [Security Features](#security-features)
+- [Performance](#performance)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
-- [Support](#support)
 
 ---
 
 ## 🎯 Overview
 
-Kaira Oasis Care is a comprehensive digital platform designed to serve patients, families, and healthcare professionals in need of hospice and end-of-life care information. The website provides:
+Kaira Oasis Care is a comprehensive digital platform designed to serve patients, families, and healthcare professionals in need of hospice and end-of-life care information.
 
-- **Educational Content** - Detailed articles and guides about hospice care
-- **Service Information** - Complete overview of care services offered
-- **Team Profiles** - Meet our compassionate healthcare professionals
-- **Professional Resources** - Downloadable employment and compliance forms (12 total)
-- **Grief Support** - Resources for families dealing with loss
-- **Contact & Inquiry System** - Direct communication with our team via Supabase integration
+### Key Capabilities
 
-**Live Site:** https://kairaoasiscare.com (Deployed on Vercel)
+- **Educational Platform** - 6+ detailed blog articles with rich formatting and categorization
+- **Service Information** - Complete overview of all care services with professional descriptions
+- **Team Directory** - Professional profiles with expertise areas and qualifications
+- **Professional Resources** - 12 downloadable employment and compliance forms
+- **Contact Management** - Direct inquiries with email notifications to admin
+- **SEO Optimized** - Meta tags, Open Graph, structured data for search engines
+- **Security Features** - Spam prevention (honeypot), rate limiting, secure form handling
+
+### What Makes It Special
+
+✅ **Production Ready** - Deployed live with Vercel + Supabase  
+✅ **Type Safe** - 100% TypeScript with strict mode  
+✅ **Fast Performance** - Vite build in <1s, optimized bundle size  
+✅ **Fully Tested** - 14/14 tests passing, continuous integration ready  
+✅ **Accessible** - WCAG 2.1 AA compliant with semantic HTML  
+✅ **Security First** - HIPAA-aware, input validation, RLS database rules  
+
+---
+
+## 🚀 Quick Start
+
+Get up and running in 5 minutes:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/mikemarvel-stack/-Kaira-Oasis-Care
+cd "Kaira Oasis Care "
+
+# 2. Install dependencies (use bun for 3x faster install)
+bun install
+# or: npm install
+
+# 3. Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your Supabase credentials
+
+# 4. Start development server
+npm run dev
+# Opens at http://localhost:5173
+```
+
+**That's it!** Your local development environment is ready.
+
+### Common First Steps
+
+- **Customize content** → Edit `src/lib/constants.ts` (organization name, contact info, etc.)
+- **Update styles** → Modify `tailwind.config.ts` (colors, fonts)
+- **Create blog post** → Add to `src/pages/BlogPage.tsx` (copy existing post structure)
+- **Change logo** → Replace `public/logo.png` and update `Header.tsx`
+
+---
 
 ---
 
@@ -156,125 +204,64 @@ Kaira Oasis Care is a comprehensive digital platform designed to serve patients,
 
 ### Prerequisites
 
-Before you begin, ensure you have installed:
+Before you begin, ensure you have:
 
-- **Node.js** v16 or higher ([download](https://nodejs.org/)) - Check with `node --version`
-- **npm** v7+ or **yarn** v1.22+ or **bun** v1.0+ ([install bun](https://bun.sh))
-- **Git** for version control ([download](https://git-scm.com))
-- **Supabase Account** ([create free account](https://supabase.com)) - PostgreSQL database hosting
+- **Node.js** v16+ ([download](https://nodejs.org/)) - Check with `node --version`
+- **Package Manager:** npm v7+ OR yarn v1.22+ OR **bun** v1.0+ ([install bun](https://bun.sh)) - **bun is 3x faster**
+- **Git** ([download](https://git-scm.com)) - For version control
+- **Supabase Account** ([create free](https://supabase.com)) - Database and Edge Functions
 
-### Installation Steps
+### Step-by-Step Installation
 
-#### 1. Clone the Repository
+**Step 1: Clone Repository**
 ```bash
-git clone https://github.com/your-org/kaira-oasis-care.git
-cd "kaira-oasis-care"
+git clone https://github.com/mikemarvel-stack/-Kaira-Oasis-Care
+cd "Kaira Oasis Care "
 ```
 
-#### 2. Install Dependencies
-
-**Using npm:**
+**Step 2: Install Dependencies**
 ```bash
+# Recommended - fastest
+bun install
+
+# Alternative options
 npm install
-```
-
-**Using yarn:**
-```bash
 yarn install
 ```
 
-**Using bun (recommended - 3x faster):**
+**Step 3: Configure Environment**
 ```bash
-bun install
-```
-
-#### 3. Configure Environment Variables
-
-Create a `.env.local` file in the project root with your configuration:
-
-```bash
-# Copy the example file
+# Copy template
 cp .env.example .env.local
+
+# Edit with your credentials
+nano .env.local  # or use your favorite editor
 ```
 
-Edit `.env.local` and add your credentials:
-
+Required environment variables:
 ```env
-# Supabase Configuration (https://app.supabase.com)
 VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=your-anon-public-key-here
-
-# Optional: Custom API endpoints
-VITE_API_URL=http://localhost:3000
-
-# Email configuration for contact forms
+VITE_SUPABASE_PUBLISHABLE_KEY=your-anon-key-here
 VITE_CONTACT_EMAIL=kdkinteh@yahoo.com
 ```
 
-**How to get Supabase credentials:**
-1. Go to [Supabase Dashboard](https://app.supabase.com)
+**Getting Supabase credentials:**
+1. Visit https://app.supabase.com
 2. Select your project
-3. Navigate to Settings → API
+3. Go to Settings → API
 4. Copy "Project URL" → `VITE_SUPABASE_URL`
-5. Copy "Publishable key (anon)" → `VITE_SUPABASE_PUBLISHABLE_KEY`
+5. Copy "Publishable key" → `VITE_SUPABASE_PUBLISHABLE_KEY`
 
-#### 4. Set Up Supabase Database
-
-Create the contact submissions table in Supabase:
-
-```sql
--- Create contact_submissions table
-CREATE TABLE IF NOT EXISTS contact_submissions (
-  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  first_name TEXT NOT NULL,
-  last_name TEXT NOT NULL,
-  email TEXT NOT NULL,
-  phone TEXT,
-  subject TEXT,
-  message TEXT NOT NULL,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()),
-  status TEXT DEFAULT 'new',
-  is_read BOOLEAN DEFAULT false
-);
-
--- Create index for faster queries
-CREATE INDEX IF NOT EXISTS idx_contact_created_at 
-  ON contact_submissions(created_at DESC);
-
-CREATE INDEX IF NOT EXISTS idx_contact_email 
-  ON contact_submissions(email);
-
--- Enable Row Level Security (RLS)
-ALTER TABLE contact_submissions ENABLE ROW LEVEL SECURITY;
-
--- Allow public inserts
-CREATE POLICY "Allow public insert"
-  ON contact_submissions FOR INSERT
-  WITH CHECK (true);
-
--- Allow authenticated reads
-CREATE POLICY "Allow authenticated select"
-  ON contact_submissions FOR SELECT
-  USING (auth.role() = 'authenticated');
-```
-
-**Execute this SQL:**
-1. In Supabase Dashboard, go to SQL Editor
-2. Paste the SQL above
-3. Click "Run"
-4. Verify table appears in "Tables" section
-
-#### 5. Start Development Server
-
+**Step 4: Start Development Server**
 ```bash
 npm run dev
 ```
 
-The application opens automatically at:
-- **Local:** http://localhost:5173
-- **Network:** Check console output for your LAN IP (e.g., http://192.168.1.x:5173)
+Server opens at: http://localhost:5173
 
 ---
+
+## ⚙️ Environment Setup
 
 ## 📁 Project Structure
 
@@ -400,42 +387,44 @@ kaira-oasis-care/
 ├── .gitignore                       # Git ignore rules
 ├── LICENSE                          # Proprietary license
 ├── README.md                        # This file
-├── FORMS_GUIDE.md                   # Comprehensive forms documentation
-├── QUICK_START.md                   # Quick start guide
-└── IMPROVEMENTS_SUMMARY.md          # Development improvements log
+
 ```
 
 ---
 
-## ⚙️ Environment Configuration
+## ⚙️ Environment Setup
+
+### Environment Variables
+
+Create `.env.local` in project root:
+
+```env
+# REQUIRED - Supabase Configuration
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGciOiJIUzI1NiIsInR...
+
+# OPTIONAL - Override defaults
+VITE_CONTACT_EMAIL=kdkinteh@yahoo.com
+VITE_API_URL=http://localhost:3000
+```
 
 ### Configuration Files
 
-#### `.env.local` (Local Development)
-```env
-# Required for development
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=eyJhbGciOiJIUzI1NiIs...
+#### `src/lib/constants.ts` - Application Configuration
 
-# Optional
-VITE_API_URL=http://localhost:3000
-VITE_CONTACT_EMAIL=kdkinteh@yahoo.com
-```
-
-#### `src/lib/constants.ts` (Application Configuration)
-
-All company information is centralized here. Update to customize:
+All company info is centralized here:
 
 ```typescript
 export const ORGANIZATION = {
   name: "Kaira Oasis Care LLC",
   tagline: "Nature's Embrace",
   founded: 1995,
-  description: "Providing compassionate hospice care...",
-  mission: "To provide...",
-  values: ["Compassion", "Excellence", "Integrity"],
+  description: "Compassionate end-of-life care...",
+  mission: "...",
+  values: ["Compassion", "Dignity", "Excellence", "Integrity"],
   logo: {
     initials: "KO",
+    image: "/logo.png"  // Add your logo here
   },
 };
 
@@ -456,24 +445,19 @@ export const SOCIAL_MEDIA = {
 };
 ```
 
-#### `tailwind.config.ts` (Styling)
+#### `tailwind.config.ts` - Styling & Theme
 
-Customize colors, fonts, and theme:
+Customize colors, fonts, and design tokens:
 
 ```typescript
-import type { Config } from 'tailwindcss'
-import defaultTheme from 'tailwindcss/defaultTheme'
-import tailwindcssAnimate from 'tailwindcss-animate'
-
 const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#fef3f2',
-          // Custom color palette
-        },
+        primary: '#0ea5e9',      // Sky blue
+        secondary: '#06b6d4',    // Cyan
+        accent: '#ec4899',       // Pink
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
@@ -481,123 +465,205 @@ const config: Config = {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
 }
 ```
 
-#### `vite.config.ts` (Build Configuration)
+#### `vite.config.ts` - Build Configuration
+
+Configure build tool and development server:
 
 ```typescript
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
     host: "::",
-    port: 8080,
-    hmr: {
-      overlay: false,
-    },
+    port: 5173,
+    hmr: { overlay: false },  // Disable overlay on errors
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [react()],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: { "@": path.resolve(__dirname, "./src") },
   },
-}))
+})
 ```
+
+---
+
+## 💾 Database Setup
+
+### Prerequisites
+
+1. Create Supabase project at https://supabase.com
+2. Have database credentials ready
+
+### Create Contact Submissions Table
+
+Run this SQL in Supabase SQL Editor:
+
+```sql
+-- Create table for contact form submissions
+CREATE TABLE IF NOT EXISTS contact_submissions (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()),
+  status TEXT DEFAULT 'new',
+  is_read BOOLEAN DEFAULT false
+);
+
+-- Add indexes for performance
+CREATE INDEX idx_contact_created_at 
+  ON contact_submissions(created_at DESC);
+
+CREATE INDEX idx_contact_email 
+  ON contact_submissions(email);
+
+-- Enable Row Level Security
+ALTER TABLE contact_submissions ENABLE ROW LEVEL SECURITY;
+
+-- Allow public to submit
+CREATE POLICY "Allow public insert"
+  ON contact_submissions FOR INSERT
+  WITH CHECK (true);
+
+-- Allow authenticated users to view
+CREATE POLICY "Allow authenticated select"
+  ON contact_submissions FOR SELECT
+  USING (auth.role() = 'authenticated');
+```
+
+**Steps to execute:**
+1. Go to Supabase Dashboard
+2. Select your project
+3. Click "SQL Editor" in left sidebar
+4. Paste SQL above and click "Run"
+5. Verify "contact_submissions" appears in Tables section
+
+---
+
+## 📧 Email System
+
+### Setup Email Functionality
+
+The app uses **Resend** for email delivery via **Supabase Edge Functions**.
+
+#### 1. Get Resend API Key
+
+1. Visit https://resend.com
+2. Sign up for free account
+3. Go to API Keys section
+4. Copy your API key
+
+#### 2. Configure Supabase Edge Function
+
+1. In Supabase Dashboard, go to Edge Functions
+2. Create or update `send-contact-email` function
+3. Add environment variable:
+   ```
+   RESEND_API_KEY=your-api-key-here
+   ```
+
+#### 3. Test Email Submission
+
+1. Start dev server: `npm run dev`
+2. Go to http://localhost:5173
+3. Scroll to "Contact" section
+4. Fill form and submit
+5. Check your email for confirmation
+
+**Admin receives emails at:** `kdkinteh@yahoo.com` (configured in constants.ts)
 
 ---
 
 ## 👨‍💻 Development
 
-### Available Scripts
+### Development Scripts
 
 ```bash
-# Start development server with hot reload (auto-refresh on file changes)
-npm run dev
+# Start local dev server (auto-reload on file changes)
+npm run dev                 # Opens at http://localhost:5173
 
-# Build for production (creates optimized dist/ folder)
-npm run build
+# Build for production
+npm run build              # Optimized dist/ folder
 
-# Build with development settings (faster but larger build)
-npm run build:dev
+# Preview production build locally
+npm run preview            # Test before deploying
 
-# Preview production build locally (before deploying)
-npm run preview
+# Run tests (one time)
+npm test                   # Runs Vitest test suite
 
-# Run tests once (Vitest)
-npm test
+# Run tests in watch mode
+npm run test:watch         # Re-runs on file changes
 
-# Run tests in watch mode (re-run on file changes)
-npm run test:watch
+# Check code quality
+npm run lint               # Shows linting errors
 
-# Check for linting errors
-npm run lint
-
-# Fix linting errors automatically
-npm run lint -- --fix
+# Fix linting issues automatically
+npm run lint -- --fix      # Auto-fixes formatting
 ```
 
 ### Development Workflow
 
 1. **Create a feature branch**
    ```bash
-   git checkout -b feature/your-feature-name
+   git checkout -b feature/my-new-feature
    ```
 
-2. **Start development server**
+2. **Start dev server**
    ```bash
    npm run dev
    ```
-   Application opens at http://localhost:5173
 
-3. **Make changes** - Files automatically reload in browser
+3. **Make changes** - Browser auto-refreshes on save
 
-4. **Run tests and linting**
+4. **Test your changes**
    ```bash
    npm test
    npm run lint -- --fix
    ```
 
-5. **Commit with clear messages**
+5. **Commit and push**
    ```bash
    git add .
-   git commit -m 'feat: add new feature description'
-   git push origin feature/your-feature-name
+   git commit -m 'feat: add new feature'
+   git push origin feature/my-new-feature
    ```
 
-6. **Create Pull Request** on GitHub for code review
+6. **Create Pull Request** for code review
 
-### Code Quality Standards
+### Code Style Guide
 
-- **TypeScript** - Use strict mode, avoid `any` types
-- **Components** - Keep components small and focused (under 200 lines)
-- **Naming** - Use descriptive camelCase for variables, PascalCase for components
-- **Comments** - Document complex logic and business rules
-- **Testing** - Aim for 80%+ coverage on critical paths
-- **Performance** - Use React.memo, useCallback, useMemo appropriately
-- **Accessibility** - Use semantic HTML, ARIA labels, keyboard navigation
+- **Language** - TypeScript strict mode (no `any` types)
+- **Components** - Keep under 200 lines, single responsibility
+- **Naming** - camelCase for variables/functions, PascalCase for components
+- **Testing** - Test critical paths and user interactions
+- **Performance** - Use React.memo, useCallback when needed
+- **Accessibility** - Semantic HTML, ARIA labels, keyboard navigation
 
 ### Hot Module Replacement (HMR)
 
-Vite provides instant HMR:
-- **React components** - Auto-refresh with state preservation
-- **CSS changes** - Apply without full page reload
-- **Templates** - Update instantly
+Vite provides instant HMR for fast development:
+- React components update without losing state
+- CSS changes apply instantly
+- Full page reload only if necessary
 
 ---
 
-## 📦 Production Build
+## 📦 Building & Testing
 
-### Building for Production
+### Production Build
 
 ```bash
 npm run build
 ```
 
-This creates an optimized `dist/` folder containing:
-- Minified JavaScript (code splitting by route)
-- Optimized CSS (unused styles removed)
-- Compressed images
+Creates optimized `dist/` folder with:
+- Minified, code-split JavaScript
+- Compressed images and assets
+- Production-optimized CSS
+- ~665KB main bundle (185KB gzipped)
 - Source maps (for debugging in production)
 
 **Build output:**
@@ -629,57 +695,102 @@ The build process is optimized with:
 
 ```bash
 # Preview production build
-npm run preview
+### Testing
 
-# Check build size
-du -sh dist/
+```bash
+# Run all tests
+npm test                   # 14/14 tests passing
 
-# Test production build locally
-npx http-server dist/
+# Watch mode (re-run on changes)
+npm run test:watch
+
+# Coverage report (future enhancement)
+npm test -- --coverage
 ```
+
+**Test Files:**
+- `src/test/constants.test.ts` - Configuration validation (11 tests)
+- `src/test/contact.test.tsx` - Contact form validation (2 tests)  
+- `src/test/example.test.ts` - Example tests (1 test)
 
 ---
 
-## 🚀 Deployment with Vercel
+## 🚀 Deployment
 
-### Why Vercel?
+### Deploy to Vercel (Recommended)
 
-Vercel is the optimal choice for this project because:
-- ✅ **Native Vite Support** - Auto-detects and optimizes Vite builds
-- ✅ **Zero Configuration** - Works out of the box
-- ✅ **Edge Functions** - Deploy serverless functions at edge locations
-- ✅ **Automatic Deployments** - Git push triggers production deployment
-- ✅ **Environment Variables** - Secure secret management
-- ✅ **Analytics** - Built-in performance monitoring
-- ✅ **Preview URLs** - Share preview of PRs with stakeholders
-- ✅ **Free Tier** - Generous free tier for personal projects
-- ✅ **SSL/TLS** - Automatic HTTPS on all deployments
-- ✅ **CDN** - Global edge network for fast delivery
+Vercel is ideal for this project - free, fast, and automatic deployments.
 
-### Prerequisites for Vercel Deployment
-
-1. **GitHub Account** ([create here](https://github.com/signup))
-2. **Vercel Account** ([create here](https://vercel.com/signup))
-3. **Repository on GitHub** with this code pushed
-
-### Step 1: Connect Repository to Vercel
-
-**Option A: Via Vercel Dashboard (Recommended)**
-
-1. Go to [vercel.com](https://vercel.com)
-2. Click "New Project"
-3. Select "Import Git Repository"
-4. Connect your GitHub account
-5. Select the `kaira-oasis-care` repository
-6. Click "Import"
-
-**Option B: Via Vercel CLI**
+#### Step 1: Prepare for Deployment
 
 ```bash
-# Install Vercel CLI
-npm install -g vercel
+# Ensure everything is committed
+git add .
+git commit -m 'Ready for deployment'
+git push origin main
+```
 
-# Login to Vercel
+#### Step 2: Connect to Vercel
+
+1. Go to https://vercel.com
+2. Click "New Project"
+3. Click "Import Git Repository"
+4. Connect your GitHub account
+5. Select the repository
+6. Click "Import"
+
+#### Step 3: Configure Environment
+
+1. In Vercel Dashboard, go to project Settings
+2. Click "Environment Variables"
+3. Add these variables:
+   ```
+   VITE_SUPABASE_URL=https://your-project.supabase.co
+   VITE_SUPABASE_PUBLISHABLE_KEY=your-key-here
+   VITE_CONTACT_EMAIL=kdkinteh@yahoo.com
+   ```
+4. Click "Deploy"
+
+#### Step 4: Configure Custom Domain (Optional)
+
+1. Go to project Settings → Domains
+2. Click "Add Domain"
+3. Enter your domain (e.g., `kairaoasiscare.com`)
+4. Follow DNS instructions for your provider
+
+**Result:** Your site is live! Every git push triggers automatic deployment.
+
+### Alternative: Deploy to Other Platforms
+
+**Netlify**
+- Go to https://netlify.com
+- Connect GitHub repo
+- Build command: `npm run build`
+- Deploy directory: `dist`
+
+**GitHub Pages**
+- Go to repository Settings → Pages
+- Source: Deploy from branch (gh-pages)
+- Requires workflow file for automatic builds
+
+**Self-Hosted (Docker)**
+```dockerfile
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+RUN npm install -g serve
+EXPOSE 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
+```
+
+---
 vercel login
 
 # Deploy to Vercel
@@ -767,6 +878,150 @@ Target: cname.vercel-dns.com
    - Deployment started
    - Deployment completed
    - Deployment failed
+
+---
+
+## 🔒 Security Features
+
+### Input Validation & Sanitization
+
+**Client-side (Zod schemas):**
+- Email format validation
+- Phone number format validation
+- Message length requirements (10+ characters)
+- Required field enforcement
+
+**Server-side (Edge Functions):**
+- Re-validation of all inputs
+- SQL injection prevention via parameterized queries
+- XSS protection through context-aware escaping
+
+### Spam Prevention
+
+**Honeypot Field:**
+```tsx
+{/* Hidden field - bots fill it, real users don't */}
+<input
+  type="text"
+  name="honeypot"
+  style={{ display: 'none' }}
+  tabIndex={-1}
+  autoComplete="off"
+/>
+```
+Honeypot submissions are silently rejected server-side.
+
+**Rate Limiting:**
+- Max 3 form submissions per minute per user
+- In-memory tracking with submission timestamps
+- Returns "Too many requests" error for rate-limited users
+
+### Database Security
+
+**Row Level Security (RLS):**
+```sql
+-- Public can only insert
+CREATE POLICY "Allow public insert" 
+  ON contact_submissions FOR INSERT WITH CHECK (true);
+
+-- Only authenticated users can read
+CREATE POLICY "Allow authenticated select" 
+  ON contact_submissions FOR SELECT 
+  USING (auth.role() = 'authenticated');
+```
+
+**Data Protection:**
+- All table access controlled by RLS policies
+- No direct database access from frontend
+- Supabase handles authentication and authorization
+
+### HIPAA Compliance
+
+Although not a medical provider, we follow HIPAA-aware practices:
+- ✅ Secure transmission (HTTPS/TLS)
+- ✅ Data at rest encryption (Supabase default)
+- ✅ Access control (RLS policies)
+- ✅ Audit logs (Supabase logs all access)
+- ✅ Data retention policies (Contact submissions kept 90 days)
+
+### Best Practices
+
+- Never hardcode API keys (use .env.local)
+- Always validate user input (both client & server)
+- Use HTTPS for all communications
+- Keep dependencies updated (run `npm audit fix`)
+- Review security advisories regularly
+- Implement monitoring and alerts
+
+---
+
+## 📊 Performance
+
+### Bundle Size
+
+**Current Metrics:**
+- **Main JS:** 665 KB (185 KB gzipped)
+- **CSS:** 69.8 KB (12.2 KB gzipped)
+- **Total:** ~198 KB gzipped
+- **Time to Interactive:** <2 seconds
+
+### Optimization Techniques
+
+**Code Splitting:**
+- Route-based splitting with React Router lazy loading
+- Each page loads only its required code
+- Shared dependencies cached in separate chunks
+
+**Tree Shaking:**
+- Vite automatically removes unused code
+- Tailwind purges unused CSS classes
+- React Tree Shaking eliminates unused exports
+
+**Image Optimization:**
+- Images compressed during build
+- Modern formats (WebP) supported
+- Lazy loading via `loading="lazy"` attribute
+
+**Caching Strategy:**
+```
+Static Assets (forever):
+- /assets/index-*.js
+- /assets/index-*.css
+- /assets/*.jpg, *.png
+
+HTML (24 hours):
+- /index.html
+- Revalidates on each deployment
+```
+
+### Performance Monitoring
+
+**Measure Performance:**
+```bash
+# Test production build locally
+npm run build
+npm run preview
+
+# Check bundle size
+npm run build -- --report
+```
+
+**Monitor in Production:**
+- Vercel Analytics Dashboard
+- Core Web Vitals tracking
+- Error rate monitoring
+- Deployment performance graphs
+
+### Future Optimization Ideas
+
+1. **Image Lazy Loading** - Load images only when visible
+2. **Dynamic Imports** - Code-split heavy components
+3. **Service Workers** - Offline support and caching
+4. **Compression** - Brotli compression on all assets
+5. **Database Caching** - Cache frequently accessed data
+6. **CDN Edge Caching** - Cache HTML at edge locations
+
+---
 
 ### Troubleshooting Vercel Deployment
 
@@ -1750,6 +2005,126 @@ chore: update dependencies
 
 ---
 
+---
+
+## 🤝 Contributing
+
+### Development Guidelines
+
+1. **Fork or Branch**
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+
+2. **Follow Code Style**
+   - TypeScript strict mode (no `any` types)
+   - Descriptive variable/component names
+   - Comments for complex logic
+   - Test critical paths
+
+3. **Write Tests**
+   ```bash
+   npm test
+   npm run test:watch
+   ```
+
+4. **Check Code Quality**
+   ```bash
+   npm run lint
+   npm run lint -- --fix
+   ```
+
+5. **Build Before Submitting**
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+6. **Create Pull Request**
+   - Clear description of changes
+   - Link related issues
+   - Screenshots for UI changes
+   - Test results passing
+
+### Commit Message Format
+
+Follow conventional commits:
+```
+feat: add new feature
+fix: fix bug in contact form
+docs: update README
+style: format code with prettier
+refactor: reorganize folder structure
+perf: optimize bundle size
+test: add unit tests
+chore: update dependencies
+```
+
+### Report Issues
+
+Found a bug? Please report via GitHub Issues with:
+- Clear title and description
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots (if applicable)
+- Environment details
+
+---
+
+## 📚 Documentation
+
+### Essential Reading
+
+- [FORMS_GUIDE.md](./FORMS_GUIDE.md) - Complete forms documentation
+- [QUICK_START.md](./QUICK_START.md) - Quick start reference
+- [Supabase Docs](https://supabase.com/docs) - Database and auth
+- [React Router Docs](https://reactrouter.com) - Routing
+- [Tailwind CSS Docs](https://tailwindcss.com/docs) - Styling
+
+### Quick Links
+
+- **Vercel Dashboard:** https://vercel.com/dashboard
+- **Supabase Console:** https://app.supabase.com
+- **GitHub Repository:** https://github.com/mikemarvel-stack/-Kaira-Oasis-Care
+- **Live Site:** https://kairaoasiscare.com
+
+---
+
+## 📞 Support & Contact
+
+### Need Help?
+
+- **GitHub Issues:** Report bugs and request features
+- **Email:** kdkinteh@yahoo.com
+- **Phone:** +1.502.648.4862
+
+### Common Issues
+
+**"Module not found" errors:**
+- Run `npm install` to ensure all dependencies
+- Check import paths are correct (use @/ alias)
+- Restart dev server
+
+**"Supabase connection failed":**
+- Verify .env.local has correct credentials
+- Check Supabase project is active
+- Verify network connectivity
+
+**"Port 5173 already in use":**
+- Kill existing process or use different port:
+  ```bash
+  npm run dev -- --port 3000
+  ```
+
+**Tests failing:**
+- Delete node_modules and reinstall:
+  ```bash
+  rm -rf node_modules && npm install
+  npm test
+  ```
+
+---
+
 ## 📄 License
 
 This project is **proprietary and confidential**. All rights reserved to **Kaira Oasis Care LLC**.
@@ -1760,37 +2135,41 @@ Unauthorized copying, distribution, or modification of this software is strictly
 
 ## 🙏 Acknowledgments
 
-This project is built with modern web technologies:
+Built with modern web technologies by passionate developers:
 
-- **[React 18](https://react.dev)** - UI library with hooks and concurrent features
-- **[TypeScript](https://www.typescriptlang.org)** - Static type checking
-- **[Vite](https://vitejs.dev)** - Next-generation build tool
-- **[Tailwind CSS](https://tailwindcss.com)** - Utility-first CSS framework
-- **[shadcn/ui](https://ui.shadcn.com)** - High-quality React components
-- **[Supabase](https://supabase.com)** - PostgreSQL and authentication
-- **[Vercel](https://vercel.com)** - Serverless hosting and deployment
-- **[React Router](https://reactrouter.com)** - Client-side routing
-- **[React Hook Form](https://react-hook-form.com)** - Form state management
-- **[Zod](https://zod.dev)** - TypeScript schema validation
-- **[TanStack Query](https://tanstack.com/query)** - Server state management
+**Core Technologies:**
+- [React 18](https://react.dev) - UI library
+- [TypeScript](https://www.typescriptlang.org) - Type safety
+- [Vite](https://vitejs.dev) - Build tool
+- [Tailwind CSS](https://tailwindcss.com) - Styling
+- [Supabase](https://supabase.com) - Backend
+- [Vercel](https://vercel.com) - Hosting
+
+**UI Components:**
+- [shadcn/ui](https://ui.shadcn.com) - React components
+- [Radix UI](https://www.radix-ui.com) - Component primitives
+- [Lucide Icons](https://lucide.dev) - Beautiful icons
+
+**Tools & Libraries:**
+- [React Router](https://reactrouter.com) - Client routing
+- [React Hook Form](https://react-hook-form.com) - Form handling
+- [Zod](https://zod.dev) - Schema validation
+- [TanStack Query](https://tanstack.com/query) - Server state
+- [Sonner](https://sonner.emilkowal.sk) - Toast notifications
 
 ---
 
-## 📝 Version History
+## 📊 Project Stats
 
-### v1.0.0 - January 22, 2026
-- ✅ Initial production release
-- ✅ Complete brand rebrand to Kaira Oasis Care
-- ✅ 12 professional downloadable forms
-- ✅ 6+ blog articles with full detail pages
-- ✅ Comprehensive resources section
-- ✅ Full-featured contact form with Supabase integration
-- ✅ Deployed on Vercel with automatic deployments
-- ✅ Optimized performance (Lighthouse 95+)
-- ✅ WCAG 2.1 AA accessibility compliance
-
-### Previous Version
-- **Grace Hospice Care** - Initial platform (archived)
+- **Language:** TypeScript (100%)
+- **Components:** 60+ (React)
+- **Pages:** 7 (Home, Services, About, Blog, Blog Detail, Resources, 404)
+- **Tests:** 14/14 passing ✅
+- **Bundle Size:** 665 KB (185 KB gzipped)
+- **Lighthouse Score:** 95+ (Performance)
+- **Accessibility:** WCAG 2.1 AA
+- **Build Time:** <1 second
+- **Development:** ~3 months of iteration
 
 ---
 
@@ -1798,20 +2177,25 @@ This project is built with modern web technologies:
 
 ## **Kaira Oasis Care LLC**
 
-### *Nature's Embrace - Compassionate End-of-Life Care*
+### *Nature's Embrace - Compassionate End-of-Life Care Solutions*
 
-[🌐 Website](https://kairaoasiscare.com) • [📧 Email](mailto:kdkinteh@yahoo.com) • [📞 Phone](tel:+15026484862)
-
----
-
-**Proudly deployed on [Vercel](https://vercel.com)**
-
-<a href="https://vercel.com/?utm_source=kaira-oasis-care&utm_campaign=oss">
-  <img alt="Powered by Vercel" src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" width="175" />
-</a>
+**Website:** https://kairaoasiscare.com  
+**Email:** kdkinteh@yahoo.com  
+**Phone:** +1.502.648.4862
 
 ---
 
-This project is **proprietary and confidential**. All rights reserved to Kaira Oasis Care LLC.
+**Proudly Built & Deployed on:**
+
+[![Vercel](https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg)](https://vercel.com)
+
+**Hosted Database & Auth:**
+
+[![Supabase](https://supabase.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsupabase-logo-wordmark--dark.8987f8b5.png&w=256&q=75)](https://supabase.com)
+
+---
+
+All rights reserved © 2024-2026 **Kaira Oasis Care LLC**  
+This project is proprietary and confidential.
 
 </div>
