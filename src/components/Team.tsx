@@ -1,4 +1,4 @@
-import kaddyImage from "@/assets/Kaddy-Gales.jpeg";
+import kaddyImage from "@/assets/team-doctor.jpg";
 
 const teamMembers = [
   {
