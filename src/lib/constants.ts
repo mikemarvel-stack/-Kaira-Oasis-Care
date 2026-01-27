@@ -4,7 +4,7 @@
  */
 
 export const ORGANIZATION = {
-  name: "Kaira Oasis Care LLC",
+  name: "Kaira Oasis Care",
   tagline: "Nature's Embrace",
   founded: 2021,
   description:

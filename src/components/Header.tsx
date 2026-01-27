@@ -37,19 +37,21 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container-section">
-        <div className="flex items-center justify-between h-24 lg:h-20">
+        <div className="flex items-center justify-between h-28 lg:h-24">
           {/* Logo - Improved Size & Design */}
-          <Link to="/" className="flex items-center gap-4 group hover:opacity-90 transition-opacity">
+          <Link to="/" className="flex items-center gap-3 group hover:opacity-90 transition-all duration-300 hover:scale-105 flex-shrink-0">
             {ORGANIZATION.logo.image ? (
-              <img 
-                src={ORGANIZATION.logo.image} 
-                alt={ORGANIZATION.name}
-                className="h-16 lg:h-14 w-auto object-contain"
-              />
+              <div className="relative">
+                <img 
+                  src={ORGANIZATION.logo.image} 
+                  alt={ORGANIZATION.name}
+                  className="h-20 lg:h-16 w-auto object-contain drop-shadow-md group-hover:drop-shadow-lg transition-all"
+                />
+              </div>
             ) : (
               <svg 
                 viewBox="0 0 200 200" 
-                className="h-16 lg:h-14 w-16 lg:w-14 flex-shrink-0"
+                className="h-20 lg:h-16 w-20 lg:w-16 flex-shrink-0"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <defs>
