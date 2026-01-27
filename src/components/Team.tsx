@@ -1,12 +1,10 @@
-import kaddyImage from "@/assets/team-doctor.jpg";
-
 const teamMembers = [
   {
     name: "Kaddy Gales, RN, BSN",
     role: "CEO & Founder",
     specialty: "Residential Care",
     bio: "Kaddy Gales, RN, BSN, founded Kaira Oasis Care in 2021 with a passion for providing compassionate residential care. With her nursing background and dedication to personalized service, she leads every aspect of our organization to ensure our residents receive the highest quality care and support.",
-    image: kaddyImage,
+    image: "/Kaddy Gales.jpeg",
   },
 ];
 
