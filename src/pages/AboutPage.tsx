@@ -7,9 +7,9 @@ import careComfortImage from "@/assets/care-comfort.jpg";
 import familySupportImage from "@/assets/family-support.jpg";
 
 const stats = [
-  { icon: Heart, value: "2,500+", label: "Patients Served" },
-  { icon: Award, value: "25+", label: "Years of Service" },
-  { icon: Users, value: "150+", label: "Care Team Members" },
+  { icon: Heart, value: "30+", label: "Residents Served" },
+  { icon: Award, value: "~5", label: "Years of Service" },
+  { icon: Users, value: "1", label: "Founder" },
   { icon: Clock, value: "24/7", label: "Support Available" },
 ];
 
@@ -55,24 +55,24 @@ const AboutPage = () => {
                   About Us
                 </span>
                 <h1 className="heading-hero text-foreground mb-6">
-                  A Legacy of Compassionate Care
+                  Compassionate Residential Care Since 2021
                 </h1>
                 <p className="text-body text-muted-foreground mb-6">
-                  For over 25 years, kaira Oasis care has been providing exceptional 
-                  end-of-life care to patients and families in our community. Our 
-                  mission is to ensure that every person's final chapter is filled 
-                  with comfort, dignity, and love.
+                  Since 2021, Kaira Oasis Care has been providing exceptional 
+                  residential care to residents and families in our community. Our 
+                  mission is to ensure that every resident experiences comfort, dignity, and love 
+                  through personalized, compassionate care.
                 </p>
                 <p className="text-body text-muted-foreground">
-                  Founded by healthcare professionals who saw the need for more 
-                  compassionate end-of-life care, we've grown from a small team to 
-                  a comprehensive hospice organization serving thousands of families.
+                  Founded by Kaddy Gales, RN, BSN, our organization is dedicated to 
+                  delivering quality residential care with a personal touch. We believe 
+                  in building meaningful relationships with every resident and family we serve.
                 </p>
               </div>
               <div className="relative">
                 <img
                   src={careComfortImage}
-                  alt="Compassionate hospice care"
+                  alt="Compassionate residential care"
                   className="rounded-2xl shadow-xl"
                 />
                 <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl hidden lg:block">
@@ -115,10 +115,9 @@ const AboutPage = () => {
                   Our Mission
                 </h2>
                 <p className="text-muted-foreground">
-                  To provide exceptional, compassionate hospice care that honors the 
-                  dignity of every patient while supporting families through life's 
-                  most challenging moments. We believe everyone deserves to experience 
-                  comfort, peace, and love in their final days.
+                  To provide exceptional, compassionate residential care that honors the 
+                  dignity of every resident while supporting families through their care journey. We believe everyone deserves to experience 
+                  comfort, peace, and love in a safe, nurturing environment.
                 </p>
               </div>
               <div className="card-hospice">
@@ -126,10 +125,10 @@ const AboutPage = () => {
                   Our Vision
                 </h2>
                 <p className="text-muted-foreground">
-                  To be the leading hospice care provider in our region, recognized 
-                  for excellence in patient care, innovation in palliative medicine, 
-                  and unwavering commitment to the families we serve. We envision a 
-                  community where end-of-life care is accessible, compassionate, and 
+                  To be the leading residential care provider in our region, recognized 
+                  for excellence in person-centered care, compassion, and dedication 
+                  to the residents and families we serve. We envision a 
+                  community where quality residential care is accessible, compassionate, and 
                   dignified for all.
                 </p>
               </div>

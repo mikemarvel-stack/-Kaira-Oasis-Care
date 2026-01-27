@@ -6,11 +6,11 @@
 export const ORGANIZATION = {
   name: "Kaira Oasis Care LLC",
   tagline: "Nature's Embrace",
-  founded: 1995,
+  founded: 2021,
   description:
-    "Providing compassionate, dignified end-of-life care and family support for over 25 years.",
+    "Providing compassionate, dignified residential care and family support since 2021.",
   mission:
-    "To provide comfort, dignity, and support for patients and families during their journey.",
+    "To provide comfort, dignity, and support for residents and families during their journey.",
   logo: {
     initials: "KO",
     image: "/logo.png",
@@ -48,10 +48,10 @@ export const ROUTES = {
 };
 
 export const STATS = {
-  yearsOfService: "25+",
-  familiesServed: "10,000+",
-  patientsServed: "2,500+",
-  teamMembers: "150+",
+  yearsOfService: "~5",
+  familiesServed: "30+",
+  patientsServed: "30+",
+  teamMembers: "1",
   supportAvailable: "24/7",
 };
 

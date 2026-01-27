@@ -79,8 +79,8 @@ const Contact = () => {
               We're Here to Help
             </h2>
             <p className="text-body text-muted-foreground mb-10">
-              Whether you have questions about our services, need immediate support, 
-              or want to learn more about hospice care, our compassionate team is 
+              Whether you have questions about our residential care services, need immediate support, 
+              or want to learn more about how we can help, our compassionate team is 
               ready to assist you.
             </p>
 

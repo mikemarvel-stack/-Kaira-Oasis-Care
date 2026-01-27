@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Compassionate hospice care"
+          alt="Compassionate residential care"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/30" />
@@ -29,17 +29,17 @@ const Hero = () => {
       <div className="container-section relative z-10">
         <div className="max-w-2xl">
           <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium mb-6 animate-fade-in backdrop-blur-sm">
-            Serving families with dignity since 1995
+            Serving families with dignity since 2021
           </span>
           
           <h1 className="heading-display text-primary-foreground mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Compassionate Care in Life's Most Precious Moments
+            Compassionate Residential Care for Every Stage of Life
           </h1>
           
           <p className="text-body text-primary-foreground/90 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            At kaira Oasis care, we believe every moment matters. Our dedicated team provides 
-            comfort, dignity, and support for patients and families during their journey, 
-            wherever they call home.
+            At kaira Oasis Care, we believe every moment matters. Our dedicated founder provides 
+            comfort, dignity, and personalized support for residents and families on their journey, 
+            right here in our community.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.3s" }}>
@@ -62,12 +62,12 @@ const Hero = () => {
           <div className="mt-12 pt-8 border-t border-primary-foreground/20 animate-fade-in" style={{ animationDelay: "0.5s" }}>
             <div className="flex flex-wrap gap-8">
               <div>
-                <p className="text-3xl font-display font-bold text-primary-foreground">25+</p>
+                <p className="text-3xl font-display font-bold text-primary-foreground">~5</p>
                 <p className="text-sm text-primary-foreground/80">Years of Service</p>
               </div>
               <div>
-                <p className="text-3xl font-display font-bold text-primary-foreground">10,000+</p>
-                <p className="text-sm text-primary-foreground/80">Families Served</p>
+                <p className="text-3xl font-display font-bold text-primary-foreground">30+</p>
+                <p className="text-sm text-primary-foreground/80">Residents Served</p>
               </div>
               <div>
                 <p className="text-3xl font-display font-bold text-primary-foreground">24/7</p>

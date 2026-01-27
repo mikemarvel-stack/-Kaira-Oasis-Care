@@ -50,16 +50,16 @@ const About = () => {
               About kaira Oasis care
             </span>
             <h2 className="heading-section text-foreground mb-6">
-              A Legacy of Compassion and Care
+              Compassionate Residential Care Since 2021
             </h2>
             <p className="text-body text-muted-foreground mb-6">
-              For over 25 years, kaira Oasis care has been a trusted partner for families 
-              navigating end-of-life care. Our mission is to provide exceptional hospice 
-              care that honors life, brings comfort, and supports families every step of the way.
+              Since 2021, kaira Oasis Care has been a trusted partner for families 
+              seeking quality residential care. Our mission is to provide exceptional 
+              care that honors dignity, brings comfort, and supports families every step of the way.
             </p>
             <p className="text-body text-muted-foreground mb-8">
-              Our interdisciplinary team works together to create personalized care plans 
-              that address physical, emotional, and spiritual needs.
+              Our dedicated founder, Kaddy Gales, RN, BSN, works closely with each resident 
+              to create personalized care plans that address physical, emotional, and spiritual needs.
             </p>
 
             {/* Values List */}

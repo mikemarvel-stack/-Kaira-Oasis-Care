@@ -1,3 +1,7 @@
+User-agent: *
+Allow: /
+
+# Specific crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +14,10 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Disallow private pages
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://kairaoasiscare.com/sitemap.xml
+Sitemap: https://www.kairaoasiscare.com/sitemap.xml

@@ -9,12 +9,12 @@ const services = [
   {
     icon: Users,
     title: "Family Support",
-    description: "Counseling, education, and emotional support for families throughout the hospice journey and beyond.",
+    description: "Counseling, education, and emotional support for families throughout their residential care journey and beyond.",
   },
   {
     icon: Home,
-    title: "In-Home Care",
-    description: "Comprehensive hospice services delivered in the comfort of your own home or care facility.",
+    title: "In-Home & Residential Care",
+    description: "Comprehensive residential care services delivered in the comfort of your own home or our care facility.",
   },
   {
     icon: Clock,
@@ -43,11 +43,11 @@ const Services = () => {
             Our Services
           </span>
           <h2 className="heading-section text-foreground mb-4">
-            Comprehensive Hospice Care Services
+            Comprehensive Residential Care Services
           </h2>
           <p className="text-body text-muted-foreground">
             We provide a complete range of services designed to bring comfort, dignity, 
-            and peace to patients and their families during life's most meaningful moments.
+            and peace to residents and their families with personalized, compassionate care.
           </p>
         </div>
 

@@ -1,36 +1,12 @@
-import teamDoctor from "@/assets/team-doctor.jpg";
-import teamNurse from "@/assets/team-nurse.jpg";
-import teamCaregiver from "@/assets/team-caregiver.jpg";
-import teamSocialWorker from "@/assets/team-social-worker.jpg";
+import kaddyImage from "@/assets/Kaddy-Gales.jpeg";
 
 const teamMembers = [
   {
-    name: "Dr. Elizabeth Chen",
-    role: "Medical Director",
-    specialty: "Palliative Medicine",
-    bio: "With over 25 years of experience in hospice care, Dr. Chen leads our medical team with compassion and expertise. She is board-certified in both internal medicine and hospice/palliative care.",
-    image: teamDoctor,
-  },
-  {
-    name: "Michael Rodriguez, RN",
-    role: "Nursing Director",
-    specialty: "Hospice Nursing",
-    bio: "Michael brings 15 years of hospice nursing experience to our team. His gentle approach and clinical expertise make him an invaluable member of our care staff.",
-    image: teamNurse,
-  },
-  {
-    name: "Aisha Johnson",
-    role: "Lead Caregiver",
-    specialty: "Patient Comfort Care",
-    bio: "Aisha's dedication to patient comfort and dignity has made her one of our most beloved caregivers. She specializes in creating peaceful, nurturing environments for our patients.",
-    image: teamCaregiver,
-  },
-  {
-    name: "David Thompson, LCSW",
-    role: "Social Services Director",
-    specialty: "Family Counseling",
-    bio: "David provides emotional support and counseling to patients and families. His expertise in grief counseling and family dynamics helps guide families through difficult times.",
-    image: teamSocialWorker,
+    name: "Kaddy Gales, RN, BSN",
+    role: "CEO & Founder",
+    specialty: "Residential Care",
+    bio: "Kaddy Gales, RN, BSN, founded Kaira Oasis Care in 2021 with a passion for providing compassionate residential care. With her nursing background and dedication to personalized service, she leads every aspect of our organization to ensure our residents receive the highest quality care and support.",
+    image: kaddyImage,
   },
 ];
 

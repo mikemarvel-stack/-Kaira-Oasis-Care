@@ -15,14 +15,14 @@ const services = [
   {
     icon: Users,
     title: "Family Support",
-    description: "We understand that hospice care affects the entire family. Our team provides emotional support, education, and resources to help family members cope during this difficult time.",
+    description: "We understand that residential care affects the entire family. We provide emotional support, education, and resources to help family members adjust and participate in care.",
     features: ["Family counseling", "Caregiver training", "Support groups", "Respite care"],
   },
   {
     icon: Home,
-    title: "Home-Based Care",
-    description: "Most patients prefer to receive care in the comfort of their own home. Our team comes to you, bringing all necessary equipment, supplies, and compassionate care.",
-    features: ["In-home visits", "Medical equipment", "Supply delivery", "Home safety assessment"],
+    title: "Home-Based & Residential Care",
+    description: "Residents can receive care in their own home or in our comfortable care facility. Our team brings all necessary equipment, supplies, and compassionate care to ensure comfort.",
+    features: ["In-home visits", "Medical equipment", "Supply delivery", "Safe facility care"],
   },
   {
     icon: Clock,
@@ -33,8 +33,8 @@ const services = [
   {
     icon: Stethoscope,
     title: "Medical Services",
-    description: "Our experienced medical team provides comprehensive healthcare services under the direction of our hospice physicians, working closely with your personal doctor.",
-    features: ["Physician oversight", "Skilled nursing", "Therapy services", "Medical social work"],
+    description: "Our founder, Kaddy Gales, RN, BSN, and her team provide comprehensive healthcare services, working closely with your personal healthcare provider.",
+    features: ["Nursing oversight", "Skilled care", "Medication management", "Health coordination"],
   },
   {
     icon: HandHeart,
@@ -44,9 +44,9 @@ const services = [
   },
   {
     icon: Shield,
-    title: "Bereavement Support",
-    description: "Our commitment to your family continues after your loved one passes. We offer bereavement services for up to 13 months to help with the grieving process.",
-    features: ["Grief counseling", "Memorial services", "Support groups", "Resource referrals"],
+    title: "Emotional & Social Support",
+    description: "We help residents and families navigate changes and transitions. Our compassionate approach includes counseling, support groups, and resources for emotional well-being.",
+    features: ["Counseling services", "Support groups", "Social connections", "Resource referrals"],
   },
   {
     icon: BookOpen,
@@ -75,12 +75,12 @@ const ServicesPage = () => {
               Our Services
             </span>
             <h1 className="heading-hero text-foreground mb-6">
-              Comprehensive Hospice Care Services
+              Comprehensive Residential Care Services
             </h1>
             <p className="text-body text-muted-foreground max-w-3xl mx-auto mb-8">
-              We provide a full range of hospice care services designed to address the physical, 
-              emotional, and spiritual needs of patients and their families. Every service is 
-              delivered with compassion, dignity, and respect.
+              We provide a full range of residential care services designed to address the physical, 
+              emotional, and spiritual needs of residents and their families. Every service is 
+              delivered with compassion, dignity, and personalized attention.
             </p>
             <Button onClick={handleConsultation} className="btn-primary">Request a Consultation</Button>
           </div>
