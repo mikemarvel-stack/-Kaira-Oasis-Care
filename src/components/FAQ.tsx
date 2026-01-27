@@ -7,43 +7,43 @@ import {
 
 const faqs = [
   {
-    question: "What is hospice care?",
-    answer: "Hospice care is specialized medical care focused on providing comfort, support, and quality of life for individuals facing a life-limiting illness. Rather than curative treatment, hospice emphasizes pain management, symptom control, and emotional support for both patients and their families.",
+    question: "What is residential care?",
+    answer: "Residential care is personalized living support that provides assistance with daily activities, health management, and personal care. Our service focuses on maintaining independence while providing compassionate support for those who need help with activities of daily living and overall wellbeing.",
     category: "General",
   },
   {
-    question: "Who is eligible for hospice care?",
-    answer: "Generally, hospice care is available to individuals with a life expectancy of six months or less if the illness runs its normal course. A physician must certify this prognosis. However, patients can continue receiving hospice care beyond six months if they still meet the criteria.",
+    question: "Who can benefit from residential care?",
+    answer: "Our residential care services are ideal for seniors, individuals recovering from illness, those with chronic conditions, or anyone who benefits from assistance with daily living activities while maintaining their independence and dignity in a comfortable home environment.",
     category: "Eligibility",
   },
   {
-    question: "Where is hospice care provided?",
-    answer: "Hospice care can be provided wherever the patient calls home—in a private residence, assisted living facility, nursing home, or in a dedicated hospice facility. Our team brings care directly to you, ensuring comfort in familiar surroundings.",
+    question: "Where is residential care provided?",
+    answer: "Residential care can be provided in your own home or in our comfortable residential facility. We bring professional care directly to you, ensuring comfort and support in familiar or safe surroundings tailored to your needs.",
     category: "Services",
   },
   {
-    question: "What services are included in hospice care?",
-    answer: "Our comprehensive hospice care includes physician services, nursing care, pain and symptom management, medical equipment and supplies, medications related to the terminal diagnosis, counseling services, spiritual support, volunteer assistance, and bereavement support for families.",
+    question: "What services are included in residential care?",
+    answer: "Our comprehensive residential care includes assistance with daily living activities, health monitoring, medication management, meal preparation, housekeeping support, transportation assistance, social activities, 24/7 availability, and family coordination to ensure all aspects of care are addressed.",
     category: "Services",
   },
   {
-    question: "How is hospice care paid for?",
-    answer: "Medicare, Medicaid, and most private insurance plans cover hospice care. The Medicare Hospice Benefit covers virtually all costs related to the terminal illness, including medications, equipment, and 24/7 access to care. We also offer financial assistance programs for those who qualify.",
+    question: "How is residential care paid for?",
+    answer: "Residential care can be covered through various means including Medicare, Medicaid (for qualified services), private insurance, long-term care insurance, or private payment. We work with families to understand coverage options and provide financial counseling to explore available resources.",
     category: "Financial",
   },
   {
-    question: "Can a patient leave hospice care?",
-    answer: "Yes, absolutely. Hospice care is voluntary, and patients can choose to leave at any time to pursue curative treatment. If circumstances change, patients can also return to hospice care when appropriate.",
+    question: "Can a resident adjust their level of care?",
+    answer: "Yes, absolutely. Residential care is flexible, and residents can adjust their level of services based on changing needs. As circumstances evolve, we work with residents and families to modify care plans to ensure we continue meeting your specific needs.",
     category: "General",
   },
   {
     question: "What support is available for family members?",
-    answer: "We provide extensive family support including caregiver training, respite care, 24/7 phone support, family counseling, and bereavement services that continue for up to 13 months after a loved one's passing. Our social workers and chaplains are also available to provide emotional and spiritual support.",
+    answer: "We provide comprehensive family support including regular updates, care coordination meetings, caregiver resources, 24/7 communication, family counseling services, and educational programs. Our goal is to ensure families feel supported throughout the care journey.",
     category: "Family Support",
   },
   {
-    question: "How do I start the process of getting hospice care?",
-    answer: "Simply contact us by phone or through our website. We'll arrange a free consultation to discuss your situation, answer questions, and determine if hospice is the right choice. We can coordinate with your physician to facilitate the referral process.",
+    question: "How do I start the process of getting residential care?",
+    answer: "Simply contact us by phone or through our website to schedule a free consultation. We'll discuss your needs, tour our facilities if interested, answer all your questions, and work with you to create a personalized care plan that matches your requirements.",
     category: "Getting Started",
   },
 ];
@@ -60,7 +60,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-body text-muted-foreground max-w-2xl mx-auto">
-            We understand you may have many questions about hospice care. 
+            We understand you may have many questions about residential care. 
             Here are answers to some of the most common questions we receive.
           </p>
         </div>

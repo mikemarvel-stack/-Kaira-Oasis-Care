@@ -134,7 +134,7 @@ const ServicesPage = () => {
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
               Our compassionate team is here to answer your questions and help you 
-              understand how hospice care can support your family.
+              understand how residential care can support your family and loved ones.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="secondary" size="lg">
