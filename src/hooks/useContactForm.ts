@@ -105,6 +105,14 @@ export const useContactForm = () => {
         description: "Thank you for contacting us. We'll get back to you within 24 hours.",
       });
 
+      // Open email client with pre-filled information
+      const subject = `Contact Request from ${validatedData.firstName} ${validatedData.lastName}`;
+      const body = `Dear Kaira Oasis Care Team,\n\nName: ${validatedData.firstName} ${validatedData.lastName}\nEmail: ${validatedData.email}\n${validatedData.phone ? `Phone: ${validatedData.phone}\n` : ''}\nMessage:\n${validatedData.message}\n\nBest regards`;
+      
+      // Create mailto link and open it
+      const mailtoLink = `mailto:${validatedData.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+
       return { success: true };
     } catch (error) {
       console.error("Form submission error:", error);
