@@ -5,36 +5,36 @@
 
 export const getPageMeta = (page: 'home' | 'services' | 'about' | 'blog' | 'resources') => {
   const baseUrl = 'https://kairaoasiscare.com';
-  const baseDescription = 'Compassionate hospice and palliative care services in Louisville, KY. 25+ years of providing dignity and comfort care.';
+  const baseDescription = 'Compassionate residential care services in Louisville, KY. Since 2021, providing person-centered care and family support.';
 
   const pages = {
     home: {
-      title: 'Kaira Oasis Care - Compassionate Hospice Care in Louisville',
+      title: 'Kaira Oasis Care - Compassionate Residential Care in Louisville',
       description: baseDescription,
       path: '/',
       image: `${baseUrl}/logo.png`,
     },
     services: {
-      title: 'Hospice & Palliative Care Services | Kaira Oasis Care',
-      description: 'Comprehensive hospice care services including pain management, family support, spiritual care, and bereavement services.',
+      title: 'Residential Care Services | Kaira Oasis Care',
+      description: 'Comprehensive residential care services including daily living support, health management, family support, and community engagement.',
       path: '/services',
       image: `${baseUrl}/logo.png`,
     },
     about: {
       title: 'About Kaira Oasis Care - Our Mission & Team',
-      description: 'Learn about our 25+ years of compassionate hospice care, our team, and our commitment to dignity and comfort.',
+      description: 'Learn about our commitment to compassionate residential care since 2021, our founder Kaddy Gales, and our team of dedicated care professionals.',
       path: '/about',
       image: `${baseUrl}/logo.png`,
     },
     blog: {
-      title: 'Hospice Care Resources & Articles | Kaira Oasis Care Blog',
-      description: 'Educational articles, guides, and resources about hospice care, family support, and end-of-life planning.',
+      title: 'Residential Care Resources & Articles | Kaira Oasis Care Blog',
+      description: 'Educational articles, guides, and resources about residential care, wellness, community, and family support.',
       path: '/blog',
       image: `${baseUrl}/logo.png`,
     },
     resources: {
       title: 'Resources & Forms | Kaira Oasis Care',
-      description: 'Download forms, guides, and resources to help you navigate hospice care and family support.',
+      description: 'Download forms, guides, and resources to help you navigate residential care and family support.',
       path: '/resources',
       image: `${baseUrl}/logo.png`,
     },

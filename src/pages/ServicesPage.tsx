@@ -93,7 +93,7 @@ const ServicesPage = () => {
               {services.map((service, index) => (
                 <div
                   key={service.title}
-                  className="card-hospice group"
+                  className="card-care group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="flex gap-6">

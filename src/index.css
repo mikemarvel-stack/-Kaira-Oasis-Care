@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Warm, comforting hospice palette */
+    /* Warm, comforting care palette */
     --background: 40 33% 98%;
     --foreground: 220 20% 20%;
 
@@ -40,7 +40,7 @@
 
     --radius: 0.75rem;
 
-    /* Custom hospice tokens */
+    /* Custom care tokens */
     --hero-gradient: linear-gradient(135deg, hsl(150 25% 35% / 0.9), hsl(160 30% 25% / 0.95));
     --soft-shadow: 0 4px 20px -4px hsl(220 20% 20% / 0.08);
     --card-shadow: 0 8px 30px -8px hsl(220 20% 20% / 0.1);
@@ -136,7 +136,7 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .card-hospice {
+  .card-care {
     @apply bg-card rounded-2xl p-6 md:p-8;
     box-shadow: var(--card-shadow);
   }

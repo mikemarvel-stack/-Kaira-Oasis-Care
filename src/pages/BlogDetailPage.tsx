@@ -11,142 +11,155 @@ import familySupport from "@/assets/family-support.jpg";
 
 const blogPosts = [
   {
-    title: "Understanding Hospice Care: A Complete Guide for Families",
-    excerpt: "Hospice care is a compassionate approach to care for individuals with serious, life-limiting illnesses. This comprehensive guide explains what hospice is, who is eligible, and how it can support your family during this important transition.",
+    title: "Understanding Residential Care: A Complete Guide for Families",
+    excerpt: "Residential care provides a supportive living environment for those who need assistance with daily activities. This comprehensive guide explains residential care services, benefits, and how to find the right fit for your family.",
     author: "Dr. Elizabeth Chen",
     date: "January 18, 2026",
     category: "Education",
     image: blogComfort,
-    slug: "understanding-hospice-care",
+    slug: "understanding-residential-care",
     featured: true,
-    content: `Hospice care is a specialized medical service that focuses on providing comfort and support for individuals with life-limiting illnesses and their families. Unlike traditional medical care that emphasizes treatment and cure, hospice prioritizes quality of life, pain management, and emotional and spiritual support.
+    content: `Residential care provides a compassionate, supportive living environment for individuals who need assistance with daily activities and personal care. Our residential care model prioritizes quality of life, independence with support, and meaningful community connections.
 
-## What is Hospice Care?
+## What is Residential Care?
 
-Hospice is a philosophy of care rather than a place. It can be provided in a patient's home, a hospice facility, a hospital, or a nursing home. The focus is on helping patients live their final days as fully and comfortably as possible, surrounded by loved ones.
+Residential care is a philosophy of supportive living rather than institutional care. It can be provided in a home-like setting where residents receive personalized assistance with activities of daily living while maintaining their dignity and independence. The focus is on helping residents live fulfilling lives surrounded by professional support and community.
 
-## Who Can Benefit from Hospice?
+## Who Benefits from Residential Care?
 
-Patients with any life-limiting illness may be candidates for hospice care, including:
-- Advanced cancer
-- Heart disease
-- COPD (Chronic Obstructive Pulmonary Disease)
-- Alzheimer's disease and other dementias
-- ALS (Amyotrophic Lateral Sclerosis)
-- Advanced Parkinson's disease
-- End-stage kidney or liver disease
+Individuals who may benefit from residential care include those:
+- Needing assistance with activities of daily living
+- Seeking social connection and community engagement
+- Requiring medication management and health monitoring
+- Wanting to age in place with professional support
+- Experiencing memory challenges and seeking structured support
+- Recovering from hospitalization or illness
+- Seeking an alternative to traditional nursing home environments
 
-Generally, a physician must certify that the patient has six months or less to live if the illness runs its normal course. However, patients can continue receiving hospice care beyond six months if they continue to meet the criteria.
+Residential care is appropriate for individuals at any stage of life who value community, independence, and personalized support.
 
-## What Hospice Services Include
+## What Residential Care Services Include
 
-Comprehensive hospice services typically include:
+Comprehensive residential care services typically include:
 
-**Medical Services**
-- Physician oversight and care planning
-- Skilled nursing care
-- Medical equipment and supplies
-- Medications related to the terminal diagnosis
-- Pain and symptom management
-- Lab services and diagnostic tests
+**Daily Living Support**
+- Assistance with bathing, dressing, and personal hygiene
+- Meal planning and preparation
+- Housekeeping and laundry services
+- Medication management and reminders
+- Transportation assistance
 
-**Support Services**
-- Counseling and emotional support
-- Spiritual care and chaplaincy services
-- Social work and care coordination
-- Volunteer assistance and companionship
-- Bereavement support for family members
+**Health & Wellness**
+- Regular wellness check-ins
+- Coordination with healthcare providers
+- Assistance with medical appointments
+- Health education and wellness programs
+- 24/7 availability for health concerns
 
-**Therapies**
-- Physical therapy to maintain comfort and mobility
-- Occupational therapy
-- Speech-language pathology
-- Dietary counseling
+**Social & Recreational Activities**
+- Community outings and activities
+- Social gatherings and events
+- Hobby and interest groups
+- Educational programs
+- Volunteer opportunities
 
-## The Hospice Team
+## The Residential Care Team
 
-A comprehensive hospice team includes physicians, registered nurses, nursing assistants, social workers, counselors, spiritual care providers, and trained volunteers. This interdisciplinary approach ensures that all aspects of the patient's care—physical, emotional, spiritual, and practical—are addressed.
+Our residential care team includes trained care coordinators, nursing staff, activity specialists, and support personnel. This collaborative approach ensures that residents receive comprehensive support across all aspects of daily living.
 
-## Making the Transition to Hospice
+## Making the Transition to Residential Care
 
-The decision to transition to hospice is deeply personal and often difficult. It's important to understand that choosing hospice is not "giving up" on care; rather, it's shifting the focus to what matters most during this time. Many families find that hospice care allows them to spend quality time together, free from the burden of intensive treatments.
+Choosing residential care is a positive step toward maintaining independence with professional support. Many families find that residential care allows their loved ones to thrive in a community setting while ensuring their health and safety needs are met.
 
-Having open conversations with your healthcare team, family members, and loved ones can help ensure that hospice care aligns with your values and wishes.`,
+Having open conversations with family, healthcare providers, and care professionals helps ensure that residential care aligns with your values and goals.`,
   },
   {
-    title: "Pain Management in Hospice Care: Ensuring Comfort",
-    excerpt: "Effective pain management is essential to quality of life in hospice care. Learn about the various strategies, medications, and therapies used to manage pain and improve comfort.",
+    title: "Wellness & Comfort: Ensuring Quality of Life in Residential Care",
+    excerpt: "Quality of life is central to residential care. Learn about the strategies, activities, and support systems that help residents stay healthy, engaged, and comfortable.",
     author: "Michael Rodriguez, RN, BSN",
     date: "January 12, 2026",
     category: "Care Tips",
     image: blogGarden,
-    slug: "pain-management-hospice",
-    content: `Pain management is one of the most critical aspects of hospice care. The goal is not only to reduce pain but to optimize quality of life and comfort. Hospice providers use a multimodal approach combining medications, therapies, and comfort measures.
+    slug: "wellness-quality-life",
+    content: `Quality of life and wellness are at the heart of residential care. The goal is to support residents in maintaining their physical health, emotional wellbeing, and social connections. Residential care providers use a holistic approach combining health management, activities, and community engagement.
 
-## Understanding Pain in Hospice
+## Understanding Wellness in Residential Care
 
-Pain is a subjective experience that extends beyond physical sensation. In hospice care, pain includes physical, emotional, social, and spiritual dimensions. Effective pain management addresses all of these aspects.
+Wellness extends beyond physical health—it encompasses physical, mental, emotional, and social wellbeing. Effective residential care addresses all dimensions of wellness to help residents thrive.
 
-## Medication Options
+## Health & Wellness Management
 
-**Opioids**: Often prescribed for moderate to severe pain, opioids are carefully managed to balance pain relief with side effects.
+**Preventive Care**: Regular health screenings, exercise, and nutrition programs to maintain wellness.
 
-**Non-Opioid Medications**: Includes non-steroidal anti-inflammatory drugs (NSAIDs), acetaminophen, and adjuvant medications like antidepressants and anti-seizure medications.
+**Chronic Condition Management**: Support and monitoring for managing ongoing health conditions.
 
-**Topical Treatments**: Creams, patches, and gels applied directly to the skin for localized pain.
+**Mental Health Support**: Access to counseling, social activities, and community connections.
 
-## Non-Medication Approaches
+**Medication Management**: Careful coordination of medications and health treatments.
 
-- Massage and gentle touch therapy
-- Heat and cold applications
-- Relaxation techniques and guided imagery
-- Distraction through music, art, or activities
-- Positioning and comfort aids
-- Therapeutic touch
+## Wellness Activities & Engagement
+
+- Regular physical activity and exercise programs
+- Nutrition education and healthy meal preparation
+- Cognitive activities and mental stimulation
+- Hobby and interest-based activities
+- Social and community connections
+- Volunteer and meaningful purpose opportunities
+- Spiritual and cultural activities
+
+## Building Social Connections
+
+Strong social connections are vital to wellness. Residential care communities foster:
+- Friendships among residents
+- Family involvement and visits
+- Community outreach and engagement
+- Support groups and peer networks
+- Mentorship and intergenerational activities
 
 ## Communication is Key
 
-Regular assessment and open communication between patients, families, and the care team ensure that pain management strategies are effective and adjusted as needed. Patients should never hesitate to report pain or concerns about their comfort.`,
+Regular check-ins and open communication between residents, families, and the care team ensure that wellness goals are met and adjusted as needed. Residents are encouraged to voice their preferences and concerns.`,
   },
   {
-    title: "Creating Meaningful Moments: Quality Time with Loved Ones",
-    excerpt: "Hospice care provides an opportunity to create lasting memories and meaningful connections. Discover ways to make the most of this precious time together.",
+    title: "Creating Meaningful Moments: Daily Life in Residential Care",
+    excerpt: "Residential care provides opportunities to create lasting memories and maintain social connections. Discover how daily activities and family involvement enrich life in residential communities.",
     author: "Aisha Johnson, LCSW",
     date: "January 8, 2026",
     category: "Family Support",
     image: careComfort,
-    slug: "meaningful-moments",
-    content: `One of the greatest gifts of hospice care is the opportunity to create meaningful moments and lasting memories with your loved one. While this time is bittersweet, many families find it to be profoundly valuable.
+    slug: "meaningful-moments-residential",
+    content: `One of the greatest aspects of residential care is the opportunity to maintain a rich, engaged lifestyle while receiving professional support. Residents and families can create meaningful moments and lasting memories together.
 
-## Creating Comfortable Spaces
+## Creating a Comfortable Living Space
 
-Design the patient's environment to reflect their preferences and personality. This might include:
+Personalize your residential living space to reflect your identity and preferences:
 - Favorite photos and meaningful mementos
-- Natural light and plants
-- Favorite music playing softly
-- Comfortable bedding and pillows
-- Colors and decorations that bring comfort
+- Personal furnishings and decorations
+- Plants and natural elements
+- Artwork and meaningful displays
+- Colors and décor that bring comfort
 
-## Quality Time Activities
+## Meaningful Daily Activities
 
-- Reading books or poems together
-- Watching favorite movies or shows
-- Sharing meals (adapted to the patient's abilities)
-- Looking through old photo albums
-- Recording messages or stories
-- Simple crafts or art projects
-- Taking gentle walks together
-- Sitting quietly together
+- Participating in community events and activities
+- Pursuing hobbies and interests
+- Engaging in educational programs
+- Volunteering and contributing to the community
+- Enjoying meals with friends and community members
+- Attending outings and community activities
+- Celebrating special occasions with loved ones
+- Spending quality time with family and friends
 
-## Life Review and Legacy
+## Maintaining Connections
 
-Encourage your loved one to share their life story. This can involve:
-- Recording oral histories
-- Writing letters to family members
-- Creating memory books or journals
-- Discussing favorite memories
-- Sharing advice or wisdom with younger generations
-- Completing unfinished conversations
+Build and maintain strong relationships:
+- Regular visits and calls with family members
+- Participation in family-centered events
+- Sharing stories and memories with other residents
+- Contributing to community traditions
+- Mentoring and supporting newer residents
+- Engaging in intergenerational activities
+- Maintaining external community connections
 
 ## Spiritual and Cultural Practices
 
@@ -159,211 +172,289 @@ Honor your loved one's spiritual and cultural traditions:
 
 ## Professional Support
 
-Hospice counselors and spiritual care providers can help facilitate these conversations and activities, creating a supportive environment for family connection.`,
+Our care coordinators and wellness specialists can help facilitate activities and connections, creating a supportive environment for meaningful living.`,
+    index: 2,
   },
   {
-    title: "Supporting Your Loved One: A Caregiver's Guide",
-    excerpt: "Caring for someone in hospice is both an honor and a challenge. Learn practical strategies for providing physical care, emotional support, and maintaining your own wellbeing.",
+    title: "Supporting Your Loved One: A Family Guide to Residential Care",
+    excerpt: "Supporting a loved one in residential care is both rewarding and important. Learn practical strategies for staying involved, advocating for their needs, and maintaining your relationship.",
     author: "Dr. Sarah Mitchell, MD",
     date: "January 2, 2026",
     category: "Caregiver Support",
     image: familySupport,
-    slug: "caregivers-guide",
-    content: `Family caregiving during hospice is a profound responsibility. Whether you're assisting with daily care, emotional support, or both, it's important to understand what to expect and how to care for yourself while supporting your loved one.
+    slug: "family-support-guide",
+    content: `Family involvement is essential to quality life in residential care. Whether you're helping with activities, providing emotional support, or simply staying connected, your involvement makes a real difference.
 
-## Physical Care Tasks
+## Staying Actively Involved
 
-**Hygiene and Grooming**
-- Gentle bathing or bed baths
-- Oral care and mouth swabs
-- Skin care and pressure relief
-- Appropriate dressing for comfort
+**Regular Visits and Communication**
+- Schedule regular visits that work for both you and your loved one
+- Maintain phone calls or video chats between visits
+- Involve them in family decisions and updates
+- Share family photos and news
+- Participate in community events together
 
-**Positioning and Mobility**
-- Changing positions regularly to prevent pressure injuries
-- Using pillows and support devices for comfort
-- Gentle assistance with movement when needed
-- Understanding proper body mechanics to protect your back
+**Activities Together**
+- Enjoying meals and outings together
+- Participating in community activities
+- Pursuing shared hobbies and interests
+- Taking walks or spending time outdoors
+- Attending special events and celebrations
 
-**Nutrition and Hydration**
-- Offering small, frequent meals
-- Respecting changing appetite and food preferences
-- Providing ice chips or sips of water for comfort
-- Understanding that reduced eating/drinking is normal
+## Advocating for Your Loved One
 
-## Emotional and Spiritual Support
+- Communicate needs and preferences to the care team
+- Review care plans and wellness goals regularly
+- Ask questions about medications and treatments
+- Voice concerns promptly and professionally
+- Work collaboratively with staff for best outcomes
 
-- Being present and listening without judgment
-- Validating feelings and concerns
-- Encouraging expression through conversation, writing, or art
-- Facilitating spiritual practices and rituals
-- Maintaining normalcy and connection
+## Building Relationships with Care Staff
 
-## Recognizing Signs and Symptoms
+- Introduce yourself and build rapport
+- Express appreciation for care provided
+- Share relevant health history and preferences
+- Understand staff schedules and communication channels
+- Participate in care planning discussions
 
-Understanding what's normal helps you provide better care:
-- Changes in breathing patterns
-- Skin changes and circulation
-- Confusion or consciousness changes
-- Restlessness or pain
+## Maintaining Connection and Identity
 
-Your hospice team will guide you through these changes.
+**Honoring Their Interests and Values**
+- Support participation in hobbies and interests
+- Help maintain spiritual or religious practices
+- Celebrate cultural traditions
+- Keep them connected to their community
+- Encourage meaningful activities
+
+**Supporting Their Goals**
+- Understand their wellness goals
+- Help identify meaningful activities
+- Support their independence and choices
+- Celebrate achievements and milestones
+- Encourage continued learning and growth
 
 ## Taking Care of Yourself
 
-**Practical Self-Care**
-- Get adequate sleep and rest
-- Eat healthy meals regularly
-- Take breaks when possible
-- Maintain personal hygiene
-
-**Emotional Support**
-- Seek counseling or support groups
-- Stay connected with family and friends
-- Allow yourself to experience emotions
+**Family Caregiver Wellness**
+- Maintain your own health and wellbeing
+- Set healthy boundaries
+- Seek support from other family members
+- Consider counseling or support groups
 - Don't hesitate to ask for help
 
-**Respite Care**
-- Take advantage of respite care services
-- Allow other family members to help
-- Maintain activities that bring you joy
-- Remember that self-care is not selfish
+**Managing Expectations**
+- Understand that care staff share responsibilities
+- Accept that some changes are normal
+- Focus on quality of time together
+- Find realistic ways to stay involved
+- Celebrate positive changes
 
-## When to Call the Hospice Team
+## Communication Tips
 
-Contact your hospice team if:
-- Pain increases or changes
-- Breathing becomes labored
-- New symptoms develop
-- You're overwhelmed or struggling emotionally
-- You have questions about care
+- Be respectful and professional with staff
+- Address concerns calmly and directly
+- Listen to professional recommendations
+- Share observations about your loved one
+- Work as a team for the best outcomes
 
-Remember, you're not alone. Your hospice team is there to support both you and your loved one.`,
+## When to Speak Up
+
+Contact the care team or management if:
+- Your loved one seems unhappy or unwell
+- Concerns about care quality arise
+- Medications or treatments seem problematic
+Remember, the care team is there to support both you and your loved one. Together, we can create a meaningful residential care experience.`,
+    index: 3,
   },
   {
-    title: "The Grief Journey: Understanding Loss and Healing",
-    excerpt: "Grief is a natural response to loss that unfolds over time. This article explores the grief process, common experiences, and resources to support healing.",
+    title: "Building Community: Social Connection in Residential Care",
+    excerpt: "Strong social connections are essential to wellness and happiness. Learn how residential care communities foster meaningful relationships and community belonging.",
     author: "David Thompson, LCSW, CCTP",
     date: "December 27, 2025",
     category: "Family Support",
     image: blogComfort,
-    slug: "grief-journey",
-    content: `Grief is the emotional response to loss. When we lose someone we love, we experience a range of emotions and reactions that are deeply personal and unique. Understanding grief can help you navigate this journey with greater compassion for yourself.
+    slug: "building-community",
+    content: `Social connection and community belonging are fundamental to quality of life. Residential care communities provide unique opportunities to build meaningful relationships and feel part of something larger.
 
-## The Grief Experience
+## Why Community Matters
 
-Grief is not linear. It doesn't follow a predictable timeline, and there's no "right way" to grieve. Common experiences include:
+Research shows that strong social connections:
+- Improve mental and physical health
+- Reduce anxiety and depression
+- Increase sense of purpose and belonging
+- Enhance overall quality of life
+- Support cognitive wellness
+- Create meaning and fulfillment
 
-**Emotional Responses**
-- Deep sadness and longing
-- Anger and frustration
-- Guilt and regret
-- Relief (which can bring guilt)
-- Anxiety about the future
-- Numbness or emotional detachment
+## Building Friendships in Residential Care
 
-**Physical Responses**
-- Fatigue and exhaustion
-- Sleep disturbances
-- Changes in appetite
-- Tension and aches
-- Weakness
+**Shared Experiences**
+- Attending community activities and events
+- Participating in group meals and social gatherings
+- Joining interest-based clubs and groups
+- Volunteering together in community service
+- Enjoying recreational activities
 
-**Cognitive Effects**
-- Difficulty concentrating
-- Forgetfulness
-- Intrusive thoughts about the deceased
-- Preoccupation with memories
+**Deep Connections**
+- Finding kindred spirits with shared interests
+- Building meaningful one-on-one relationships
+- Mentoring and supporting other residents
+- Sharing life stories and experiences
+- Creating inside jokes and traditions
 
-## The Grief Process
+## Community Activities and Engagement
 
-Grief often involves several phases, though people move through these at their own pace:
+**Recreational Activities**
+- Games, arts, crafts, and creative pursuits
+- Music, performances, and cultural events
+- Educational workshops and learning groups
+- Physical activities and exercise classes
+- Outdoor activities and nature appreciation
 
-**Shock and Denial**: Initial numbness that protects you from overwhelming emotions.
+**Meaningful Participation**
+- Volunteer opportunities within the community
+- Leadership roles in resident councils
+- Planning and organizing events
+- Contributing skills and talents
+- Intergenerational activities with visitors
 
-**Acute Grief**: The peak of emotional pain, often involving crying, sadness, and intense emotions.
+## Family Integration
 
-**Adaptation**: Gradually learning to live with the loss and remembering with less acute pain.
+Strong communities welcome family involvement:
+- Family visits and participation in events
+- Multi-generational activities
+- Sharing traditions and celebrations
+- Involving family in resident leadership
+- Building relationships with other families
 
-**Integration**: Honoring your loved one's memory while moving forward with life.
+## Maintaining Broader Community Connections
 
-## Supporting Your Grief
+- Staying connected to external community organizations
+- Participating in volunteer work and causes
+- Maintaining long-standing friendships
+- Engaging with religious or spiritual communities
+- Contributing to society and making a difference
 
-**Allow Yourself to Feel**
-Don't suppress emotions or feel you "should" be doing better. Emotions need expression.
+## Overcoming Social Barriers
 
-**Create Rituals**
-Memorial services, anniversaries, and personal rituals can honor your loved one and provide comfort.
+**Shyness or Social Anxiety**
+- Start with smaller group activities
+- Find interest-based groups
+- Volunteer to build connections
+- Work with activity staff for introductions
 
-**Connect with Others**
-Share your experience with people who understand. Support groups can be invaluable.
+**Mobility or Health Challenges**
+- Participate in adapted activities
+- Join virtual or in-room programs
+- Engage in one-on-one connections
+- Contribute skills that don't require mobility
 
-**Maintain Memories**
-Create memory books, plant trees, create charitable donations, or other meaningful tributes.
+## Creating Your Community Niche
 
-**Seek Professional Support**
-Grief counseling or therapy can provide tools and support during difficult periods.
+- Identify your interests and passions
+- Try different activities and groups
+- Connect with people who share interests
+- Develop regular participation patterns
+- Lead or organize activities you care about
 
-**Practice Self-Compassion**
-Be gentle with yourself. Healing takes time, and grief is an expression of love.
-
-## Professional Resources
-
-Hospice bereavement programs, grief counselors, and support groups offer specialized help during this journey.`,
+Community is built one connection at a time. Your residential care home is a place to thrive, grow, and belong.`,
   },
   {
-    title: "Advance Directives and End-of-Life Planning",
-    excerpt: "Planning ahead ensures your wishes are known and respected. Learn about advance directives, living wills, and other important documents.",
-    author: "kaira Oasis care Team",
+    title: "Health Planning and Wellness Goals in Residential Care",
+    excerpt: "Proactive health planning ensures you receive the right support. Learn about wellness assessments, health goals, and coordinating with healthcare providers.",
+    author: "Kaira Oasis Care Team",
     date: "December 20, 2025",
     category: "Education",
     image: blogGarden,
-    slug: "advance-directives",
-    content: `Having conversations about end-of-life care and documenting your wishes is one of the most important gifts you can give your loved ones. Advance directives and related documents ensure your values and preferences guide your care.
+    slug: "health-planning",
+    Content: `Planning for your health and wellness in residential care ensures you receive personalized support aligned with your values and goals. Proactive health management leads to better outcomes and quality of life.
 
-## What is an Advance Directive?
+## Initial Health Assessment
 
-An advance directive is a legal document that communicates your healthcare wishes if you become unable to speak for yourself. It typically includes:
+When entering residential care, you'll receive a comprehensive health assessment that includes:
+- Medical history review
+- Current medications and conditions
+- Functional abilities and limitations
+- Nutritional and dietary needs
+- Mental health and wellness history
+- Social and support network
 
-**Living Will**
-Specifies what types of medical treatment you do or don't want, such as:
-- Resuscitation
-- Artificial nutrition and hydration
-- Mechanical ventilation
-- Medication for comfort
+This assessment forms the foundation of your personalized care plan.
 
-**Healthcare Power of Attorney**
-Designates someone to make healthcare decisions on your behalf if you cannot make them yourself.
+## Developing Wellness Goals
 
-**HIPAA Authorization**
-Allows healthcare providers to discuss your medical information with designated family members or friends.
+Work with your care team to establish realistic, meaningful wellness goals:
 
-## Important Conversations
+**Physical Wellness**
+- Maintaining or improving mobility
+- Managing chronic conditions effectively
+- Achieving adequate nutrition and hydration
+- Getting quality sleep
+- Engaging in appropriate physical activity
 
-**Talk with Your Healthcare Provider**
-Discuss your health status, prognosis, and treatment options.
+**Mental and Emotional Wellness**
+- Managing stress and anxiety
+- Maintaining cognitive engagement
+- Addressing depression or mental health concerns
+- Building meaningful relationships
+- Finding purpose and fulfillment
 
-**Talk with Your Family**
-Share your values, wishes, and any concerns. Make sure your designated healthcare proxy understands your wishes.
+**Social Wellness**
+- Maintaining family connections
+- Building friendships within community
+- Participating in group activities
+- Contributing to community life
+- Staying connected to broader community
 
-**Document Your Wishes**
-Work with an attorney or use state-specific forms to create official documents.
+## Healthcare Coordination
 
-**Review and Update**
-Revisit your documents if your health changes or your wishes evolve.
+Residential care staff work with your healthcare providers to:
+- Manage medications effectively
+- Monitor chronic conditions
+- Coordinate specialist care
+- Document health changes
+- Communicate with your family
+- Ensure continuity of care
 
-## Why It Matters
+## Regular Wellness Reviews
 
-Having clear advance directives:
-- Reduces burden on family members
-- Ensures your wishes are known and respected
-- Reduces conflict among family members
-- Provides peace of mind
-- Honors your autonomy and values
+Your care plan should be reviewed regularly to:
+- Assess progress toward wellness goals
+- Adjust support as health changes
+- Address new concerns promptly
+- Celebrate achievements
+- Modify goals as appropriate
 
-## Resources
+## Your Role in Health Planning
 
-Your healthcare provider, hospice team, or an elder law attorney can help you create appropriate documents for your state.`,
+- Communicate your values and preferences
+- Ask questions about your care
+- Report health concerns promptly
+- Participate in care decisions
+- Share feedback about your experience
+- Work collaboratively with staff
+
+## Important Health Conversations
+
+**With Your Doctor**
+- Discuss your health status and concerns
+- Ask about preventive care and screenings
+- Understand your conditions and treatments
+- Discuss goals and preferences
+
+**With Your Care Team**
+- Review your care plan regularly
+- Share how you're feeling
+- Discuss any difficulties or concerns
+- Collaborate on wellness strategies
+
+**With Your Family**
+- Keep them informed about your health
+- Involve them in important decisions
+- Share your wellness goals
+- Maintain open communication
+
+Proactive health planning ensures you receive care that aligns with your values and supports your best quality of life.`,
   },
 ];
 
@@ -493,7 +584,7 @@ const BlogDetailPage = () => {
                     .map((relatedPost) => (
                       <div
                         key={relatedPost.slug}
-                        className="card-hospice cursor-pointer hover:shadow-lg transition-shadow"
+                        className="card-care cursor-pointer hover:shadow-lg transition-shadow"
                         onClick={() => navigate(`/blog/${relatedPost.slug}`)}
                       >
                         <img

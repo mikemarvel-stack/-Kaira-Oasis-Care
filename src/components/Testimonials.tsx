@@ -44,7 +44,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="card-hospice relative"
+              className="card-care relative"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Quote Icon */}

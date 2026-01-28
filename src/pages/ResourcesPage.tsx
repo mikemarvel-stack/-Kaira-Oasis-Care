@@ -95,49 +95,49 @@ const downloadableForms = [
 const resourceGuides = [
   {
     icon: FileText,
-    title: "Hospice Care Guide",
-    description: "A comprehensive guide to understanding hospice care, eligibility, and what to expect.",
+    title: "Residential Care Guide",
+    description: "A comprehensive guide to understanding residential care, services, and what to expect.",
     type: "PDF Download",
-    fileName: "Hospice-Care-Guide.pdf",
+    fileName: "Residential-Care-Guide.pdf",
   },
   {
     icon: BookOpen,
     title: "Family Caregiver Handbook",
-    description: "Essential information and tips for family members providing care at home.",
+    description: "Essential information and tips for family members supporting loved ones in residential care.",
     type: "PDF Download",
     fileName: "Family-Caregiver-Handbook.pdf",
   },
   {
     icon: Heart,
-    title: "Grief Support Resources",
-    description: "Resources and strategies for coping with grief and supporting grieving loved ones.",
+    title: "Wellness & Adjustment Resources",
+    description: "Resources to support wellness, adjustment, and quality of life in residential care settings.",
     type: "PDF Download",
-    fileName: "Grief-Support-Resources.pdf",
+    fileName: "Wellness-Adjustment-Resources.pdf",
   },
   {
     icon: Users,
-    title: "Children & Grief",
-    description: "Age-appropriate ways to help children understand and process grief.",
+    title: "Family Communication Guide",
+    description: "Tips for maintaining strong family connections and communication during residential care.",
     type: "PDF Download",
-    fileName: "Children-and-Grief.pdf",
+    fileName: "Family-Communication-Guide.pdf",
   },
 ];
 
 const externalResources = [
   {
-    title: "National Hospice and Palliative Care Organization",
-    url: "https://www.nhpco.org",
-    description: "Leading organization for hospice and palliative care resources.",
+    title: "National Center on Elder Abuse",
+    url: "https://ncea.acl.gov",
+    description: "Resources and advocacy for elder care safety and quality of life.",
   },
   {
-    title: "CaringInfo",
-    url: "https://www.caringinfo.org",
-    description: "Free resources on advance care planning and end-of-life care.",
+    title: "Caregiver Action Network",
+    url: "https://caregiveraction.org",
+    description: "Support resources and information for family caregivers and those receiving care.",
   },
   {
-    title: "Medicare Hospice Benefits",
+    title: "Medicare Long-Term Care Benefits",
     url: "https://www.medicare.gov",
-    description: "Official information about Medicare coverage for hospice care.",
+    description: "Official information about Medicare coverage for residential and long-term care services.",
   },
 ];
 
@@ -180,7 +180,7 @@ const ResourcesPage = () => {
             </h1>
             <p className="text-body text-muted-foreground max-w-3xl mx-auto">
               Download employment forms, compliance documents, and comprehensive 
-              guides to help you and your family navigate the hospice journey.
+              guides to help you and your family navigate residential care with confidence.
             </p>
           </div>
         </section>
@@ -192,7 +192,7 @@ const ResourcesPage = () => {
               <h2 className="heading-section text-foreground mb-8">{category} Forms</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {forms.map((form) => (
-                  <div key={form.title} className="card-hospice group">
+                  <div key={form.title} className="card-care group">
                     <div className="flex items-start gap-3 mb-4">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                         <form.icon className="w-5 h-5 text-primary" />
@@ -231,7 +231,7 @@ const ResourcesPage = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {resourceGuides.map((resource) => (
-                <div key={resource.title} className="card-hospice group">
+                <div key={resource.title} className="card-care group">
                   <div className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <resource.icon className="w-6 h-6 text-primary" />
@@ -275,7 +275,7 @@ const ResourcesPage = () => {
                   href={resource.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="card-hospice group hover:border-primary/50"
+                  className="card-care group hover:border-primary/50"
                 >
                   <div className="flex items-start gap-2 mb-3">
                     <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">

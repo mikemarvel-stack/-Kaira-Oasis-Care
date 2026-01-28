@@ -110,7 +110,7 @@ const AboutPage = () => {
         <section className="section-padding bg-muted">
           <div className="container-section">
             <div className="grid lg:grid-cols-2 gap-12">
-              <div className="card-hospice">
+              <div className="card-care">
                 <h2 className="font-display text-2xl font-semibold text-foreground mb-4">
                   Our Mission
                 </h2>
@@ -120,7 +120,7 @@ const AboutPage = () => {
                   comfort, peace, and love in a safe, nurturing environment.
                 </p>
               </div>
-              <div className="card-hospice">
+              <div className="card-care">
                 <h2 className="font-display text-2xl font-semibold text-foreground mb-4">
                   Our Vision
                 </h2>
@@ -147,7 +147,7 @@ const AboutPage = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {values.map((value) => (
-                <div key={value.title} className="card-hospice">
+                <div key={value.title} className="card-care">
                   <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                     {value.title}
                   </h3>

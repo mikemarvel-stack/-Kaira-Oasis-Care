@@ -71,7 +71,7 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="card-hospice border-none"
+                className="card-care border-none"
               >
                 <AccordionTrigger className="text-left font-display text-lg font-medium text-foreground hover:text-primary hover:no-underline px-6 py-4">
                   {faq.question}

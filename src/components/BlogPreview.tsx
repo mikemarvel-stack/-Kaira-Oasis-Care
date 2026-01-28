@@ -7,31 +7,31 @@ import careComfort from "@/assets/care-comfort.jpg";
 
 const blogPosts = [
   {
-    title: "Understanding the Hospice Journey: What to Expect",
-    excerpt: "A comprehensive guide to help families understand what hospice care entails and how to prepare for this important transition.",
+    title: "Understanding Residential Care: What to Expect",
+    excerpt: "A comprehensive guide to help families understand residential care and how to prepare for this important transition.",
     author: "Dr. Elizabeth Chen",
     date: "January 15, 2026",
     category: "Education",
     image: blogComfort,
-    slug: "understanding-hospice-journey",
+    slug: "understanding-residential-care",
   },
   {
-    title: "Creating a Peaceful Environment for Your Loved One",
-    excerpt: "Practical tips for transforming any space into a comfortable, calming environment that promotes healing and tranquility.",
+    title: "Creating a Comfortable Living Environment",
+    excerpt: "Practical tips for personalizing your residential space into a comfortable, welcoming environment that reflects your identity.",
     author: "Aisha Johnson",
     date: "January 10, 2026",
     category: "Care Tips",
     image: blogGarden,
-    slug: "creating-peaceful-environment",
+    slug: "meaningful-moments-residential",
   },
   {
-    title: "Supporting Children Through Grief and Loss",
-    excerpt: "Age-appropriate strategies for helping children understand and cope with the loss of a family member.",
+    title: "Building Strong Family Connections in Residential Care",
+    excerpt: "Strategies for maintaining meaningful family relationships and staying involved in your loved one's residential care experience.",
     author: "David Thompson, LCSW",
     date: "January 5, 2026",
     category: "Family Support",
     image: careComfort,
-    slug: "supporting-children-grief",
+    slug: "family-support-guide",
   },
 ];
 
@@ -49,7 +49,7 @@ const BlogPreview = () => {
             </h2>
             <p className="text-body text-muted-foreground max-w-xl">
               Helpful articles and resources to support you and your family 
-              through every step of the hospice journey.
+              through residential care and quality of life.
             </p>
           </div>
           <Link to="/blog">
@@ -64,7 +64,7 @@ const BlogPreview = () => {
           {blogPosts.map((post, index) => (
             <article
               key={post.slug}
-              className="card-hospice group overflow-hidden"
+              className="card-care group overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="aspect-video overflow-hidden rounded-xl mb-6">

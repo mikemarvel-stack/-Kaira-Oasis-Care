@@ -29,7 +29,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className="card-hospice text-center group"
+              className="card-care text-center group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden ring-4 ring-primary/20 group-hover:ring-primary/40 transition-all duration-300">

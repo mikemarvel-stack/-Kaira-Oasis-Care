@@ -62,6 +62,6 @@ export const COMPANY_SERVICES = [
   "24/7 Availability",
   "Medical Expertise",
   "Spiritual Care",
-  "Bereavement Services",
+  "Community Engagement",
   "Respite Care",
 ];
