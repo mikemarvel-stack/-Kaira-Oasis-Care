@@ -52,42 +52,45 @@ export const useContactForm = () => {
           description: "Please wait a moment before submitting another request.",
           variant: "destructive",
         });
+        setIsSubmitting(false);
         return { success: false };
       }
 
       // Validate data
       const validatedData = contactSchema.parse(data);
 
-      // Call Edge Function to send email
-      const { data: functionData, error: functionError } = await supabase.functions.invoke(
-        "send-contact-email",
-        {
-          body: {
-            firstName: validatedData.firstName,
-            lastName: validatedData.lastName,
-            email: validatedData.email,
-            phone: validatedData.phone || null,
-            message: validatedData.message,
-          },
-        }
-      );
+      // Try to send email via Edge Function first
+      let emailSent = false;
+      try {
+        const { data: functionData, error: functionError } = await supabase.functions.invoke(
+          "send-contact-email",
+          {
+            body: {
+              firstName: validatedData.firstName,
+              lastName: validatedData.lastName,
+              email: validatedData.email,
+              phone: validatedData.phone || null,
+              message: validatedData.message,
+            },
+          }
+        );
 
-      if (functionError) {
-        // Retry logic for network/transient errors
-        if (attempt < MAX_RETRIES && functionError.message.includes("Network")) {
-          await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
-          return submitForm(data, attempt + 1);
+        if (!functionError && functionData?.success) {
+          emailSent = true;
         }
-        throw functionError;
+      } catch (functionError) {
+        // Log but don't fail - we'll save to database as fallback
+        console.warn("Email sending failed, saving to database for manual processing:", functionError);
       }
 
-      // Submit to database
+      // Always save to database as primary record
       const { error: dbError } = await supabase.from("contact_submissions").insert({
         first_name: validatedData.firstName,
         last_name: validatedData.lastName,
         email: validatedData.email,
         phone: validatedData.phone || null,
         message: validatedData.message,
+        email_sent: emailSent,
       });
 
       if (dbError) {
@@ -96,23 +99,17 @@ export const useContactForm = () => {
           await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
           return submitForm(data, attempt + 1);
         }
-        // Log database error but don't fail since email was sent
-        console.error("Database error:", dbError);
+        // If database fails, we must report the error
+        throw new Error(`Failed to save your request: ${dbError.message}`);
       }
 
+      // Show success message
       toast({
         title: "Request Submitted",
         description: "Thank you for contacting us. We'll get back to you within 24 hours.",
       });
 
-      // Open email client with pre-filled information
-      const subject = `Contact Request from ${validatedData.firstName} ${validatedData.lastName}`;
-      const body = `Dear Kaira Oasis Care Team,\n\nName: ${validatedData.firstName} ${validatedData.lastName}\nEmail: ${validatedData.email}\n${validatedData.phone ? `Phone: ${validatedData.phone}\n` : ''}\nMessage:\n${validatedData.message}\n\nBest regards`;
-      
-      // Create mailto link and open it
-      const mailtoLink = `mailto:${validatedData.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailtoLink;
-
+      // Clear the form data by returning success
       return { success: true };
     } catch (error) {
       console.error("Form submission error:", error);
@@ -124,26 +121,11 @@ export const useContactForm = () => {
           variant: "destructive",
         });
       } else if (error instanceof Error) {
-        // Distinguish between network and server errors
-        if (error.message.includes("Network")) {
-          toast({
-            title: "Network Error",
-            description: "Please check your connection and try again.",
-            variant: "destructive",
-          });
-        } else if (error.message.includes("401") || error.message.includes("403")) {
-          toast({
-            title: "Authentication Error",
-            description: "There's a configuration issue. Please contact support.",
-            variant: "destructive",
-          });
-        } else {
-          toast({
-            title: "Submission Failed",
-            description: "There was an error submitting your request. Please try again.",
-            variant: "destructive",
-          });
-        }
+        toast({
+          title: "Submission Failed",
+          description: error.message,
+          variant: "destructive",
+        });
       } else {
         toast({
           title: "Submission Failed",
