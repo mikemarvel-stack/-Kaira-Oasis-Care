@@ -4,6 +4,15 @@ import { ORGANIZATION, CONTACT, SOCIAL_MEDIA, COMPANY_SERVICES } from "@/lib/con
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const handleQuickLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const quickLinks = [
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
@@ -49,7 +58,11 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm">
+                  <a 
+                    href={link.href} 
+                    onClick={(e) => handleQuickLinkClick(e, link.href)}
+                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm cursor-pointer"
+                  >
                     {link.name}
                   </a>
                 </li>
