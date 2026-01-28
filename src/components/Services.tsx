@@ -1,4 +1,7 @@
-import { Heart, Users, Home, Clock, Stethoscope, HandHeart } from "lucide-react";
+import { Heart, Users, Home, Clock, Stethoscope, HandHeart, Phone, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
+import { CONTACT } from "@/lib/constants";
 
 const services = [
   {
@@ -34,6 +37,15 @@ const services = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleConsultation = () => {
+    const contactElement = document.getElementById("contact");
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="services" className="section-padding bg-secondary/50">
       <div className="container-section">
@@ -52,7 +64,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {services.map((service, index) => (
             <div
               key={service.title}
@@ -70,6 +82,32 @@ const Services = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-primary/5 rounded-2xl p-8 lg:p-12">
+          <h3 className="font-display text-2xl lg:text-3xl font-semibold text-foreground mb-4">
+            Ready to Learn More?
+          </h3>
+          <p className="text-body text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Our compassionate team is here to answer your questions and help you understand 
+            how residential care can support your family and loved ones.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`tel:${CONTACT.phone}`}>
+              <Button className="bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                Call {CONTACT.phone}
+              </Button>
+            </a>
+            <Button 
+              onClick={handleConsultation}
+              className="btn-primary flex items-center gap-2"
+            >
+              Schedule a Consultation
+              <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
