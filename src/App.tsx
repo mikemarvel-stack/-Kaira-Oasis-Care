@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { StructuredData } from "@/components/StructuredData";
 import { validateEnv } from "@/lib/env";
 
 // Lazy load pages for code splitting
@@ -64,6 +65,7 @@ const ScrollToHash = () => {
 const App = () => (
   <ErrorBoundary>
     <HelmetProvider>
+      <StructuredData />
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />

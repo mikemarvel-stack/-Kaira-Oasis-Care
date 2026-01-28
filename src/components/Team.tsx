@@ -1,3 +1,5 @@
+import { OptimizedImage } from "@/components/OptimizedImage";
+
 const teamMembers = [
   {
     name: "Kaddy Gales, RN, BSN",

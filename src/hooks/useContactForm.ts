@@ -2,12 +2,22 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
+// HTML sanitization function
+const sanitizeHtml = (input: string): string => {
+  return input
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .replace(/\//g, '&#x2F;');
+};
+
 const contactSchema = z.object({
-  firstName: z.string().trim().min(1, "First name is required").max(100),
-  lastName: z.string().trim().min(1, "Last name is required").max(100),
+  firstName: z.string().trim().min(1, "First name is required").max(100).transform(sanitizeHtml),
+  lastName: z.string().trim().min(1, "Last name is required").max(100).transform(sanitizeHtml),
   email: z.string().trim().email("Invalid email address").max(255),
-  phone: z.string().trim().max(20).optional(),
-  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000),
+  phone: z.string().trim().max(20).optional().transform(val => val ? sanitizeHtml(val) : val),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000).transform(sanitizeHtml),
   honeypot: z.string().max(0, "Invalid submission").optional(),
 });
 

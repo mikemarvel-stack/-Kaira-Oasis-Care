@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { OptimizedImage } from "@/components/OptimizedImage";
 import { ORGANIZATION, CONTACT, ROUTES } from "@/lib/constants";
 
 const Header = () => {
@@ -42,10 +43,13 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-3 group hover:opacity-90 transition-all duration-300 hover:scale-105 flex-shrink-0">
             {ORGANIZATION.logo.image ? (
               <div className="relative">
-                <img 
+                <OptimizedImage 
                   src={ORGANIZATION.logo.image} 
                   alt={ORGANIZATION.name}
                   className="h-20 lg:h-16 w-auto object-contain drop-shadow-md group-hover:drop-shadow-lg transition-all"
+                  width={80}
+                  height={80}
+                  priority={true}
                 />
               </div>
             ) : (

@@ -12,7 +12,7 @@ const blogPosts = [
   {
     title: "Understanding Residential Care: A Complete Guide for Families",
     excerpt: "Residential care provides a supportive living environment for those who need assistance with daily activities. This comprehensive guide explains residential care services, benefits, and how to find the right fit for your family.",
-    author: "Dr. Elizabeth Chen",
+    author: "Dr. Elizabeth Chen, MD",
     date: "January 18, 2026",
     category: "Education",
     image: blogComfort,
@@ -22,20 +22,134 @@ const blogPosts = [
 
 ## What is Residential Care?
 
-Residential care is a philosophy of supportive living rather than institutional care. It can be provided in a home-like setting where residents receive personalized assistance with activities of daily living while maintaining their dignity and independence. The focus is on helping residents live fulfilling lives surrounded by professional support and community.
+Residential care is a philosophy of supportive living rather than institutional care. It provides assistance in a home-like setting where residents receive personalized support with activities of daily living while maintaining their dignity and independence. The focus is on helping residents live fulfilling lives surrounded by professional support and community.
 
 ## Who Benefits from Residential Care?
 
 Individuals who may benefit from residential care include those:
-- Needing assistance with activities of daily living
+- Needing assistance with activities of daily living (bathing, dressing, medication management)
 - Seeking social connection and community engagement
-- Requiring medication management and health monitoring
+- Requiring 24/7 supervision for safety and security
 - Wanting to age in place with professional support
 - Experiencing memory challenges and seeking structured support
 - Recovering from hospitalization or illness
 - Seeking an alternative to traditional nursing home environments
+- Requiring specialized care for chronic conditions
+
+## Types of Residential Care Services
+
+**Personal Care Assistance**
+- Help with bathing, dressing, and grooming
+- Medication management and reminders
+- Mobility assistance and fall prevention
+- Meal preparation and nutritional support
+
+**Health and Wellness Support**
+- Regular health monitoring and assessments
+- Coordination with healthcare providers
+- Physical therapy and rehabilitation services
+- Mental health and emotional support
+
+**Social and Recreational Activities**
+- Group activities and social events
+- Educational programs and workshops
+- Arts, crafts, and creative therapies
+- Outdoor activities and community outings
+
+## Choosing the Right Residential Care
+
+When selecting residential care, consider:
+- Level of care needed and services provided
+- Staff qualifications and training
+- Safety measures and emergency protocols
+- Community atmosphere and social opportunities
+- Location and accessibility for family visits
+- Cost and insurance coverage options
 
 Residential care is appropriate for individuals at any stage of life who value community, independence, and personalized support.`,
+  },
+  {
+    title: "Transitioning to Residential Care: A Step-by-Step Guide",
+    excerpt: "Making the transition to residential care can feel overwhelming. This guide provides practical steps to help families navigate the process with confidence and ensure a smooth adjustment.",
+    author: "Sarah Johnson, LCSW",
+    date: "January 15, 2026",
+    category: "Family Support",
+    image: familySupport,
+    slug: "transitioning-residential-care",
+    content: `The transition to residential care is a significant life change that requires careful planning and emotional preparation. With the right approach, this transition can be positive and empowering for both residents and their families.
+
+## Before the Move: Preparation Steps
+
+**1. Have Open Conversations**
+- Discuss the decision openly with your loved one
+- Address concerns and fears honestly
+- Involve them in the decision-making process
+- Explain the benefits and support available
+
+**2. Visit Potential Communities**
+- Tour facilities during different times of day
+- Meet with staff and ask detailed questions
+- Observe the atmosphere and resident interactions
+- Review care plans and service offerings
+
+**3. Prepare Important Documents**
+- Medical records and medication lists
+- Insurance information and financial documents
+- Legal documents (power of attorney, advance directives)
+- Emergency contact information
+
+## Making the Move Comfortable
+
+**Personalizing the Living Space**
+- Bring familiar furniture and decorations
+- Display family photos and meaningful items
+- Include favorite books, music, or hobbies
+- Create a comfortable, home-like environment
+
+**First Week Strategies**
+- Visit frequently during the initial adjustment period
+- Participate in activities together
+- Meet other residents and their families
+- Establish routines and familiar patterns
+
+## Supporting Emotional Adjustment
+
+**Common Feelings During Transition**
+- Anxiety about change and new environment
+- Grief over loss of independence
+- Excitement about new opportunities
+- Uncertainty about the future
+
+**Ways to Provide Support**
+- Listen to concerns without judgment
+- Celebrate small victories and positive moments
+- Maintain regular communication and visits
+- Encourage participation in activities
+- Be patient with the adjustment process
+
+## Building Relationships
+
+**With Care Staff**
+- Introduce yourself and share important information
+- Communicate preferences and care needs clearly
+- Express appreciation for good care
+- Address concerns promptly and respectfully
+
+**With Other Residents**
+- Encourage participation in group activities
+- Facilitate introductions when appropriate
+- Support development of new friendships
+- Respect individual preferences for social interaction
+
+## Long-term Success Strategies
+
+- Maintain regular family involvement
+- Advocate for your loved one's needs
+- Stay informed about care plans and changes
+- Celebrate milestones and achievements
+- Focus on quality of life and happiness
+
+Remember, adjustment takes time. With patience, support, and open communication, the transition to residential care can lead to improved quality of life and peace of mind for the entire family.`,
   },
   {
     title: "Wellness & Comfort: Ensuring Quality of Life in Residential Care",
@@ -51,15 +165,178 @@ Residential care is appropriate for individuals at any stage of life who value c
 
 Wellness extends beyond physical health—it encompasses physical, mental, emotional, and social wellbeing. Effective residential care addresses all dimensions of wellness to help residents thrive.
 
-## Health & Wellness Management
+## Physical Wellness
 
-**Preventive Care**: Regular health screenings, exercise, and nutrition programs to maintain wellness.
+**Exercise and Mobility**
+- Chair exercises and gentle stretching
+- Walking programs and outdoor activities
+- Physical therapy and rehabilitation
+- Balance and fall prevention programs
 
-**Chronic Condition Management**: Support and monitoring for managing ongoing health conditions.
+**Nutrition and Hydration**
+- Nutritious, well-balanced meals
+- Accommodation for dietary restrictions
+- Regular hydration monitoring
+- Social dining experiences
 
-**Mental Health Support**: Access to counseling, social activities, and community connections.
+**Health Monitoring**
+- Regular vital sign checks
+- Medication management
+- Coordination with healthcare providers
+- Preventive care and screenings
 
-**Medication Management**: Careful coordination of medications and health treatments.`,
+## Mental and Emotional Wellness
+
+**Cognitive Stimulation**
+- Memory games and puzzles
+- Reading and discussion groups
+- Educational programs and lectures
+- Creative arts and crafts
+
+**Emotional Support**
+- Individual counseling services
+- Support groups and peer connections
+- Spiritual care and chaplain services
+- Grief and loss support
+
+## Social Wellness
+
+**Community Activities**
+- Group outings and excursions
+- Holiday celebrations and special events
+- Intergenerational programs
+- Volunteer opportunities
+
+**Family Involvement**
+- Regular family visits and communication
+- Family education and support groups
+- Participation in care planning
+- Special family events and celebrations
+
+## Creating a Comfortable Environment
+
+**Physical Comfort**
+- Temperature control and lighting
+- Comfortable furniture and bedding
+- Noise reduction and quiet spaces
+- Safety features and accessibility
+
+**Emotional Comfort**
+- Respectful, compassionate care
+- Privacy and dignity preservation
+- Cultural sensitivity and inclusion
+- Personal choice and autonomy
+
+## Measuring Quality of Life
+
+Regular assessments help ensure residents are thriving:
+- Physical health and functional ability
+- Emotional wellbeing and mood
+- Social engagement and relationships
+- Satisfaction with care and services
+- Overall happiness and life satisfaction
+
+By focusing on all aspects of wellness, residential care can provide an environment where residents not only receive excellent care but also continue to grow, learn, and find joy in daily life.`,
+  },
+  {
+    title: "Memory Care: Specialized Support for Cognitive Challenges",
+    excerpt: "Memory care provides specialized support for individuals with dementia and Alzheimer's disease. Learn about memory care approaches, activities, and how families can stay involved.",
+    author: "Dr. Patricia Williams, Geriatrician",
+    date: "January 10, 2026",
+    category: "Specialized Care",
+    image: careComfort,
+    slug: "memory-care-support",
+    content: `Memory care is a specialized form of residential care designed specifically for individuals with dementia, Alzheimer's disease, and other cognitive impairments. This type of care focuses on creating a safe, structured environment that supports cognitive function while maintaining dignity and quality of life.
+
+## Understanding Memory Care
+
+Memory care differs from general residential care in several important ways:
+- Specialized staff training in dementia care
+- Secure environments designed for safety
+- Structured daily routines and activities
+- Therapeutic approaches to behavioral challenges
+- Family education and support services
+
+## Key Components of Memory Care
+
+**Environmental Design**
+- Secure, enclosed outdoor spaces
+- Clear sight lines and way-finding cues
+- Familiar, home-like settings
+- Reduced noise and overstimulation
+- Safety features and monitoring systems
+
+**Specialized Programming**
+- Cognitive stimulation activities
+- Music and art therapy
+- Reminiscence and life story work
+- Sensory stimulation programs
+- Physical exercise adapted for abilities
+
+**Person-Centered Care**
+- Individual care plans based on life history
+- Respect for personal preferences and routines
+- Validation therapy and emotional support
+- Maintenance of existing abilities
+- Dignity preservation in all interactions
+
+## Daily Life in Memory Care
+
+**Structured Routines**
+- Consistent daily schedules
+- Familiar activities and mealtimes
+- Regular sleep and wake cycles
+- Predictable care routines
+
+**Meaningful Activities**
+- Activities based on past interests and abilities
+- Social interaction and community building
+- Creative expression through arts and crafts
+- Gentle exercise and movement
+- Spiritual and cultural activities
+
+## Supporting Families
+
+**Education and Resources**
+- Understanding dementia progression
+- Communication strategies
+- Coping with behavioral changes
+- Legal and financial planning
+- Support groups and counseling
+
+**Staying Connected**
+- Regular family meetings and updates
+- Participation in care planning
+- Visiting strategies and tips
+- Special events and celebrations
+- Technology for remote connection
+
+## Managing Challenging Behaviors
+
+Memory care staff are trained to handle:
+- Agitation and restlessness
+- Wandering and exit-seeking
+- Sundowning and sleep disturbances
+- Resistance to care
+- Communication difficulties
+
+**Therapeutic Approaches**
+- Redirection and distraction techniques
+- Validation and emotional support
+- Environmental modifications
+- Medication management when appropriate
+- Non-pharmacological interventions
+
+## Choosing Memory Care
+
+When selecting memory care, consider:
+- Staff training and expertise
+- Safety and security measures
+- Activity programs and therapies
+- Family involvement opportunities
+- Progression planning for changing needs
+
+Memory care provides specialized support that can significantly improve quality of life for individuals with cognitive challenges while offering peace of mind for families.`,
   },
   {
     title: "Creating Meaningful Moments: Daily Life in Residential Care",
@@ -82,14 +359,42 @@ Personalize your residential living space to reflect your identity and preferenc
 
 ## Meaningful Daily Activities
 
-- Participating in community events and activities
-- Pursuing hobbies and interests
-- Engaging in educational programs
-- Volunteering and contributing to the community
-- Enjoying meals with friends and community members
-- Attending outings and community activities
-- Celebrating special occasions with loved ones
-- Spending quality time with family and friends
+**Individual Pursuits**
+- Reading and writing
+- Arts and crafts projects
+- Gardening and plant care
+- Music and singing
+- Puzzles and games
+
+**Community Engagement**
+- Group activities and social events
+- Educational programs and lectures
+- Religious or spiritual services
+- Volunteer opportunities
+- Intergenerational programs
+
+**Physical Activities**
+- Gentle exercise classes
+- Walking groups
+- Dancing and movement
+- Outdoor activities
+- Adaptive sports and games
+
+## Family Involvement
+
+**Regular Visits**
+- Scheduled family time
+- Shared meals and celebrations
+- Participation in activities
+- One-on-one quality time
+- Special occasion visits
+
+**Creating New Traditions**
+- Holiday celebrations in the community
+- Birthday parties and anniversaries
+- Family game nights
+- Cooking or baking together
+- Storytelling and reminiscing
 
 ## Spiritual and Cultural Practices
 
@@ -97,105 +402,36 @@ Honor your loved one's spiritual and cultural traditions:
 - Prayer or meditation
 - Religious ceremonies or rituals
 - Music that holds spiritual meaning
-- Symbolic gestures or activities
+- Cultural celebrations and foods
 - Time for reflection and peace
+
+## Building Friendships
+
+Residential care provides natural opportunities for social connection:
+- Shared meals and conversation
+- Group activities and outings
+- Common interests and hobbies
+- Mutual support and companionship
+- Celebrating milestones together
+
+## Celebrating Life Milestones
+
+- Birthdays and anniversaries
+- Holidays and seasonal celebrations
+- Personal achievements
+- Family milestones
+- Community recognition
 
 ## Professional Support
 
-Our care coordinators and wellness specialists can help facilitate activities and connections, creating a supportive environment for meaningful living.`,
-  },
-  {
-    title: "Supporting Your Loved One: A Family Guide to Residential Care",
-    excerpt: "Supporting a loved one in residential care is both rewarding and important. Learn practical strategies for staying involved, advocating for their needs, and maintaining your relationship.",
-    author: "Dr. Sarah Mitchell, MD",
-    date: "January 2, 2026",
-    category: "Caregiver Support",
-    image: familySupport,
-    slug: "family-support-guide",
-    content: `Family involvement is essential to quality life in residential care. Whether you're helping with activities, providing emotional support, or simply staying connected, your involvement makes a real difference.
+Our care coordinators and activity specialists can help facilitate:
+- Activity planning and coordination
+- Family visit arrangements
+- Special event planning
+- Connection with community resources
+- Individual interest development
 
-## Staying Actively Involved
-
-**Regular Visits and Communication**
-- Schedule regular visits that work for both you and your loved one
-- Maintain phone calls or video chats between visits
-- Involve them in family decisions and updates
-- Share family photos and news
-- Participate in community events together
-
-**Activities Together**
-- Enjoying meals and outings together
-- Participating in community activities
-- Pursuing shared hobbies and interests
-- Taking walks or spending time outdoors
-- Attending special events and celebrations
-
-## Advocating for Your Loved One
-
-- Communicate needs and preferences to the care team
-- Review care plans and wellness goals regularly
-- Ask questions about medications and treatments
-- Voice concerns promptly and professionally
-- Work collaboratively with staff for best outcomes
-
-## Building Relationships with Care Staff
-
-- Introduce yourself and build rapport
-- Express appreciation for care provided
-- Share relevant health history and preferences
-- Understand staff schedules and communication channels
-- Participate in care planning discussions
-
-## Maintaining Connection and Identity
-
-**Honoring Their Interests and Values**
-- Support participation in hobbies and interests
-- Help maintain spiritual or religious practices
-- Celebrate cultural traditions
-- Keep them connected to their community
-- Encourage meaningful activities
-
-**Supporting Their Goals**
-- Understand their wellness goals
-- Help identify meaningful activities
-- Support their independence and choices
-- Celebrate achievements and milestones
-- Encourage continued learning and growth
-
-## Taking Care of Yourself
-
-**Family Caregiver Wellness**
-- Maintain your own health and wellbeing
-- Set healthy boundaries
-- Seek support from other family members
-- Consider counseling or support groups
-- Don't hesitate to ask for help
-
-Remember, the care team is there to support both you and your loved one. Together, we can create a meaningful residential care experience.`,
-  },
-  {
-    title: "Building Community: Social Connection in Residential Care",
-    excerpt: "Strong social connections are essential to wellness and happiness. Learn how residential care communities foster meaningful relationships and community belonging.",
-    author: "David Thompson, LCSW, CCTP",
-    date: "December 27, 2025",
-    category: "Family Support",
-    image: blogComfort,
-    slug: "building-community",
-    content: `Social connection and community belonging are fundamental to quality of life. Residential care communities provide unique opportunities to build meaningful relationships and feel part of something larger.
-
-## Why Community Matters
-
-Research shows that strong social connections:
-- Improve mental and physical health
-- Reduce anxiety and depression
-- Increase sense of purpose and belonging
-- Enhance overall quality of life
-- Support cognitive wellness
-- Create meaning and fulfillment
-
-## Building Friendships in Residential Care
-
-Building strong relationships with other residents creates a sense of belonging and community. Activities, shared meals, and group programs provide natural opportunities for connection and friendship.`,
+The goal is to create an environment where every day offers opportunities for joy, connection, and meaningful experiences.`,
   },
   {
     title: "Health Planning and Wellness Goals in Residential Care",
@@ -209,21 +445,84 @@ Building strong relationships with other residents creates a sense of belonging 
 
 ## Initial Health Assessment
 
-When entering residential care, you'll receive a comprehensive health assessment that includes medical history, current medications, functional abilities, and wellness goals.
+When entering residential care, you'll receive a comprehensive health assessment that includes:
+- Complete medical history review
+- Current medications and treatments
+- Functional ability assessment
+- Cognitive and mental health evaluation
+- Nutritional and dietary needs
+- Social and emotional wellbeing
 
 ## Developing Wellness Goals
 
-Work with your care team to establish realistic, meaningful wellness goals focused on physical wellness, mental and emotional wellness, and social wellness.
+Work with your care team to establish realistic, meaningful wellness goals:
+
+**Physical Wellness Goals**
+- Maintaining mobility and independence
+- Managing chronic conditions effectively
+- Preventing falls and injuries
+- Optimizing nutrition and hydration
+
+**Mental and Emotional Wellness Goals**
+- Staying cognitively engaged
+- Managing stress and anxiety
+- Maintaining positive relationships
+- Finding purpose and meaning
+
+**Social Wellness Goals**
+- Building friendships and connections
+- Participating in community activities
+- Maintaining family relationships
+- Contributing to the community
 
 ## Healthcare Coordination
 
-Residential care staff work with your healthcare providers to manage medications effectively, monitor chronic conditions, coordinate specialist care, and ensure continuity of care.
+Residential care staff work with your healthcare providers to:
+- Manage medications effectively
+- Monitor chronic conditions
+- Coordinate specialist care
+- Ensure continuity of care
+- Communicate changes in health status
+
+## Regular Health Monitoring
+
+**Daily Observations**
+- Vital signs and general wellbeing
+- Medication effects and side effects
+- Changes in appetite or sleep
+- Mood and cognitive function
+- Physical symptoms or concerns
+
+**Periodic Assessments**
+- Comprehensive health reviews
+- Functional ability evaluations
+- Medication reviews and adjustments
+- Care plan updates
+- Goal progress evaluation
+
+## Emergency Preparedness
+
+Residential care facilities maintain:
+- 24/7 nursing coverage
+- Emergency response protocols
+- Relationships with local hospitals
+- Communication with family members
+- Documentation of preferences and directives
+
+## Advance Care Planning
+
+Important documents to have in place:
+- Advance directives
+- Healthcare power of attorney
+- POLST (Physician Orders for Life-Sustaining Treatment)
+- Emergency contact information
+- Insurance and financial information
 
 Proactive health planning ensures you receive care that aligns with your values and supports your best quality of life.`,
   },
 ];
 
-const categories = ["All", "Education", "Care Tips", "Family Support", "Therapies", "Financial", "Caregiver Support"];
+const categories = ["All", "Education", "Care Tips", "Family Support", "Specialized Care", "Caregiver Support"];
 
 const BlogPage = () => {
   const featuredPost = blogPosts.find((post) => post.featured);

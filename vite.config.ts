@@ -19,14 +19,16 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    // Ensure static assets are copied to dist
     copyPublicDir: true,
     outDir: "dist",
     assetsDir: "assets",
     rollupOptions: {
       output: {
-        // Preserve sitemap and robots.txt in root
-        manualChunks: undefined,
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          utils: ['date-fns', 'zod', 'clsx'],
+        },
       },
     },
   },
