@@ -108,51 +108,58 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    First Name
+                  <label htmlFor="firstName" className="text-sm font-medium text-foreground mb-2 block">
+                    First Name *
                   </label>
                   <Input
+                    id="firstName"
                     name="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="John"
                     required
+                    aria-describedby="firstName-error"
                     className="bg-background border-border rounded-xl h-12"
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Last Name
+                  <label htmlFor="lastName" className="text-sm font-medium text-foreground mb-2 block">
+                    Last Name *
                   </label>
                   <Input
+                    id="lastName"
                     name="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Doe"
                     required
+                    aria-describedby="lastName-error"
                     className="bg-background border-border rounded-xl h-12"
                   />
                 </div>
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email Address
+                <label htmlFor="email" className="text-sm font-medium text-foreground mb-2 block">
+                  Email Address *
                 </label>
                 <Input
+                  id="email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="john@example.com"
                   required
+                  aria-describedby="email-error"
                   className="bg-background border-border rounded-xl h-12"
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
+                <label htmlFor="phone" className="text-sm font-medium text-foreground mb-2 block">
                   Phone Number
                 </label>
                 <Input
+                  id="phone"
                   name="phone"
                   type="tel"
                   value={formData.phone}
@@ -162,23 +169,25 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  How Can We Help?
+                <label htmlFor="message" className="text-sm font-medium text-foreground mb-2 block">
+                  How Can We Help? *
                 </label>
                 <Textarea
+                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your situation and how we can support you..."
                   required
+                  aria-describedby="message-help message-count"
                   className="bg-background border-border rounded-xl min-h-[120px] resize-none"
                 />
                 <div className="flex justify-between mt-1">
-                  <span className="text-xs text-muted-foreground">
+                  <span id="message-help" className="text-xs text-muted-foreground">
                     Minimum 10 characters required
                   </span>
-                  <span className={`text-xs ${formData.message.length < 10 ? 'text-destructive' : 'text-green-600'}`}>
-                    {formData.message.length}/100
+                  <span id="message-count" className={`text-xs ${formData.message.length < 10 ? 'text-destructive' : 'text-green-600'}`}>
+                    {formData.message.length}/2000
                   </span>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { useLocation } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -7,15 +7,30 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from "@/components/ErrorBoundary";
-import Index from "./pages/Index";
-import ServicesPage from "./pages/ServicesPage";
-import AboutPage from "./pages/AboutPage";
-import ResourcesPage from "./pages/ResourcesPage";
-import BlogPage from "./pages/BlogPage";
-import BlogDetailPage from "./pages/BlogDetailPage";
-import NotFound from "./pages/NotFound";
+import { validateEnv } from "@/lib/env";
+
+// Lazy load pages for code splitting
+const Index = lazy(() => import("./pages/Index"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ResourcesPage = lazy(() => import("./pages/ResourcesPage"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
+const BlogDetailPage = lazy(() => import("./pages/BlogDetailPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+  </div>
+);
+
+// Validate environment on app start
+if (!validateEnv()) {
+  console.warn('Some environment variables are missing. App may not function correctly.');
+}
 
 /**
  * ScrollToHash component - handles scrolling to elements when hash changes
@@ -55,16 +70,18 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <ScrollToHash />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/resources" element={<ResourcesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/:slug" element={<BlogDetailPage />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/resources" element={<ResourcesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogDetailPage />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </BrowserRouter>
         </TooltipProvider>
       </QueryClientProvider>
