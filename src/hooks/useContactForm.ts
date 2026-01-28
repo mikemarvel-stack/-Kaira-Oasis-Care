@@ -59,28 +59,32 @@ export const useContactForm = () => {
       // Validate data
       const validatedData = contactSchema.parse(data);
 
-      // Try to send email via Edge Function first
+      // Send email via Vercel API
       let emailSent = false;
       try {
-        const { data: functionData, error: functionError } = await supabase.functions.invoke(
-          "send-contact-email",
-          {
-            body: {
-              firstName: validatedData.firstName,
-              lastName: validatedData.lastName,
-              email: validatedData.email,
-              phone: validatedData.phone || null,
-              message: validatedData.message,
-            },
-          }
-        );
+        const emailResponse = await fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: validatedData.firstName,
+            lastName: validatedData.lastName,
+            email: validatedData.email,
+            phone: validatedData.phone || null,
+            message: validatedData.message,
+          }),
+        });
 
-        if (!functionError && functionData?.success) {
+        if (emailResponse.ok) {
           emailSent = true;
+          console.log("Email sent successfully");
+        } else {
+          console.warn("Email sending failed, will save to database only");
         }
-      } catch (functionError) {
+      } catch (emailError) {
         // Log but don't fail - we'll save to database as fallback
-        console.warn("Email sending failed, saving to database for manual processing:", functionError);
+        console.warn("Email sending failed, saving to database for manual processing:", emailError);
       }
 
       // Always save to database as primary record
