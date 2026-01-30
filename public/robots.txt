@@ -19,5 +19,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemap location
-Sitemap: https://kairaoasiscare.com/sitemap.xml
-Sitemap: https://www.kairaoasiscare.com/sitemap.xml
+Sitemap: https://www.kairaoasis.com/sitemap.xml

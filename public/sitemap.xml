@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Home page -->
   <url>
-    <loc>https://kairaoasiscare.com/</loc>
+    <loc>https://www.kairaoasis.com/</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -10,19 +10,19 @@
   
   <!-- Main pages -->
   <url>
-    <loc>https://kairaoasiscare.com/services</loc>
+    <loc>https://www.kairaoasis.com/services</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kairaoasiscare.com/about</loc>
+    <loc>https://www.kairaoasis.com/about</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kairaoasiscare.com/resources</loc>
+    <loc>https://www.kairaoasis.com/resources</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,7 +30,7 @@
   
   <!-- Blog pages -->
   <url>
-    <loc>https://kairaoasiscare.com/blog</loc>
+    <loc>https://www.kairaoasis.com/blog</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
