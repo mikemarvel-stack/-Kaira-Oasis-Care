@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Margaret Sullivan",
     relation: "Daughter of Patient",
-    content: "The care team at kaira Oasis care became like family to us. They treated my mother with such dignity and compassion, and supported our entire family through the most difficult time of our lives.",
+    content: "The care team at Kaira Oasis Care became like family to us. They treated my mother with such dignity and compassion, and supported our entire family through the most difficult time of our lives.",
     rating: 5,
   },
   {
@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: "Jennifer Williams",
     relation: "Spouse of Patient",
-    content: "kaira Oasis care allowed my husband to spend his final days at home, surrounded by family. The nurses were incredibly skilled and caring. We felt supported every moment.",
+    content: "Kaira Oasis Care allowed my husband to spend his final days at home, surrounded by family. The nurses were incredibly skilled and caring. We felt supported every moment.",
     rating: 5,
   },
 ];

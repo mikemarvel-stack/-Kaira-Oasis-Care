@@ -39,7 +39,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-body text-primary-foreground/90 mb-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            At kaira Oasis Care, we believe every moment matters. Our dedicated founder provides 
+            At Kaira Oasis Care, we believe every moment matters. Our dedicated founder provides 
             comfort, dignity, and personalized support for residents and families on their journey, 
             right here in our community.
           </p>

@@ -17,7 +17,7 @@ const services = [
   {
     icon: Home,
     title: "In-Home & Residential Care",
-    description: "Comprehensive residential care services delivered in the comfort of your own home or our care facility.",
+    description: "Comprehensive residential services in the comfort of your residential home.",
   },
   {
     icon: Clock,

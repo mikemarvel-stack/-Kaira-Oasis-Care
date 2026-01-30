@@ -47,13 +47,13 @@ const About = () => {
           {/* Content */}
           <div className="lg:pl-8">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              About kaira Oasis care
+              About Kaira Oasis Care
             </span>
             <h2 className="heading-section text-foreground mb-6">
               Compassionate Residential Care Since 2021
             </h2>
             <p className="text-body text-muted-foreground mb-6">
-              Since 2021, kaira Oasis Care has been a trusted partner for families 
+              Since 2021, Kaira Oasis Care has been a trusted partner for families 
               seeking quality residential care. Our mission is to provide exceptional 
               care that honors dignity, brings comfort, and supports families every step of the way.
             </p>
