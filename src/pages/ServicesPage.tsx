@@ -21,7 +21,7 @@ const services = [
   {
     icon: Home,
     title: "Home-Based & Residential Care",
-    description: "Residents can receive care in their own home or in our comfortable care facility. Our team brings all necessary equipment, supplies, and compassionate care to ensure comfort.",
+    description: "Comprehensive residential services delivered in the comfort of your residential home. Our team brings all necessary equipment, supplies, and compassionate care to ensure comfort.",
     features: ["In-home visits", "Medical equipment", "Supply delivery", "Safe facility care"],
   },
   {
